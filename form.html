@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img src="src/logo_vermelho.png" alt="Logo" class="logo" onclick="backIndex()"/>
+        <nav class="navegation">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+          </ul>
+        </nav>
+      </header>
+      <form action="list.html" method="post" id="form">
+        <div id="part1" class="part-form-top">
+          <label for="name">¿Tu nombre?</label> <br />
+          <input type="text" name="name" id="name" class="name" required />
+          <div class="button" onclick="animation()">
+            <a href="#part2">SIGUIENTE</a>
+          </div>
+        </div>
+        <div id="part2" class="part-form reveal">
+          <label for="mail">¿Tu correo electrónico?</label> <br />
+          <input type="email" name="mail" id="mail" required />
+          <div class="button">
+            <a href="#part1">VOLVER</a>
+            <a href="#part3">SIGUIENTE</a>
+          </div>
+        </div>
+        <div id="part3" class="part-form reveal">
+          <label for="edad">¿Tu edad?</label> <br />
+          <input type="date" name="edad" id="edad" required />
+          <div class="button">
+            <a href="#part2">VOLVER</a>
+            <a href="#part4">SIGUIENTE</a>
+          </div>
+        </div>
+        <div id="part4" class="part-form reveal">
+          <label for="generos">Seleccione el genero que más te gusta</label>
+          <br />
+          <div class="generos">
+            <input type="radio" name="suspense" id="suspense" />
+            <h3>Suspense</h3>
+            <input type="radio" name="romance" id="romance" />
+            <h3>Romance</h3>
+            <input type="radio" name="comedia" id="comedia" />
+            <h3>Comedia</h3>
+            <input type="radio" name="historia" id="historia" />
+            <h3>Historia</h3>
+          </div>
+          <div class="button">
+            <a href="#part3">VOLVER</a>
+            <a href="#part5">SIGUIENTE</a>
+          </div>
+        </div>
+        <div id="part5" class="part-form reveal">
+          <label for="descripcion"> ¿Quieres añadir algún comentario?</label>
+          <br />
+          <textarea
+            name="descripcion"
+            id="descripcion"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="button">
+            <a href="#part4">VOLVER</a>
+            <div class="button-submit">
+              <input type="submit" name="enviar" value="SUBMIT" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

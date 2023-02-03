@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/9d699014b9.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.js"
+      integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img
+          src="src/logo_vermelho.png"
+          alt="Logo"
+          class="logo"
+          onclick="backIndex()"
+        />
+        <nav class="navegation">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Acerca de</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="titulo"><h1>Lista de Peliculas</h1></div>
+      <div class="contenedor">
+        <div class="card1">
+          <div class="numeracion"><h1>1</h1></div>
+          <div class="card-movies">
+            <div class="card__banner">
+              <div class="background">
+                <div class="c-background">
+                  <div class="card__poster">
+                    <img src="src/poster.jpg" alt="Poster" />
+                  </div>
+                  <div class="card__banner__content">
+                    <div class="__content">
+                      <h3 class="__content--title">La casa de papel</h3>
+                      <p class="__content--subtitle">
+                        Crimen, Drama - 1h 10min
+                      </p>
+                      <button class="__content--btn" id="myBtn">Ver tráiler</button>
+                      <div class="__content--widgets">
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-bookmark"></i>
+                        <i class="fas fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="src/banner.jpg" alt="Banner" />
+              <div class="drop">
+                <i
+                  class="fas fa-chevron-circle-down"
+                  id="boton1-drop"
+                  onclick="buttonDrop1()"
+                ></i>
+              </div>
+            </div>
+            <div class="card__descripcion" id="drop1-descripcion">
+              <div class="c-card__descripcion">
+                <div class="card__descripcion__texto">
+                  <h1>Resumen</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia itaque maiores veniam nam ab quas repellat enim,
+                    quam tempora rem dolores vel quod est voluptate temporibus
+                    reiciendis dolorem ipsa tempore. Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Ut vitae et fuga delectus
+                    minus, adipisci nostrum tempore alias nihil quod earum dicta
+                    eius, reprehenderit accusamus, officia tempora id. Voluptas,
+                    cupiditate.
+                  </p>
+                </div>
+                <div class="card__descripcion__img">
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/profesor.jpg"
+                      alt="Profesor"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/tokio.jpg" alt="Tokio" />
+                  </div>
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/inspectora.jpg"
+                      alt="Inspectora"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/denver.jpg" alt="Denver" />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/berlin.jpg" alt="Berlin" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card-movies">
+            <div class="card__banner">
+              <div class="background">
+                <div class="c-background">
+                  <div class="card__poster">
+                    <img src="src/poster.jpg" alt="Poster" />
+                  </div>
+                  <div class="card__banner__content">
+                    <div class="__content">
+                      <h3 class="__content--title">La casa de papel</h3>
+                      <p class="__content--subtitle">
+                        Crimen, Drama - 1h 10min
+                      </p>
+                      <button class="__content--btn">Ver tráiler</button>
+                      <div class="__content--widgets">
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-bookmark"></i>
+                        <i class="fas fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="src/banner.jpg" alt="Banner" />
+              <div class="drop">
+                <i
+                  class="fas fa-chevron-circle-down"
+                  id="boton2-drop"
+                  onclick="buttonDrop2()"
+                ></i>
+              </div>
+            </div>
+            <div class="card__descripcion" id="drop2-descripcion">
+              <div class="c-card__descripcion">
+                <div class="card__descripcion__texto">
+                  <h1>Resumen</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia itaque maiores veniam nam ab quas repellat enim,
+                    quam tempora rem dolores vel quod est voluptate temporibus
+                    reiciendis dolorem ipsa tempore. Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Ut vitae et fuga delectus
+                    minus, adipisci nostrum tempore alias nihil quod earum dicta
+                    eius, reprehenderit accusamus, officia tempora id. Voluptas,
+                    cupiditate.
+                  </p>
+                </div>
+                <div class="card__descripcion__img">
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/profesor.jpg"
+                      alt="Profesor"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/tokio.jpg" alt="Tokio" />
+                  </div>
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/inspectora.jpg"
+                      alt="Inspectora"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/denver.jpg" alt="Denver" />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/berlin.jpg" alt="Berlin" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="numeracion"><h1>2</h1></div>
+        </div>
+        <div class="card3">
+          <div class="numeracion"><h1>3</h1></div>
+          <div class="card-movies">
+            <div class="card__banner">
+              <div class="background">
+                <div class="c-background">
+                  <div class="card__poster">
+                    <img src="src/poster.jpg" alt="Poster" />
+                  </div>
+                  <div class="card__banner__content">
+                    <div class="__content">
+                      <h3 class="__content--title">La casa de papel</h3>
+                      <p class="__content--subtitle">
+                        Crimen, Drama - 1h 10min
+                      </p>
+                      <button class="__content--btn">Ver tráiler</button>
+                      <div class="__content--widgets">
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-share-alt"></i>
+                        <i class="fas fa-bookmark"></i>
+                        <i class="fas fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="src/banner.jpg" alt="Banner" />
+              <div class="drop">
+                <i
+                  class="fas fa-chevron-circle-down"
+                  id="boton3-drop"
+                  onclick="buttonDrop3()"
+                ></i>
+              </div>
+            </div>
+            <div class="card__descripcion" id="drop3-descripcion">
+              <div class="c-card__descripcion">
+                <div class="card__descripcion__texto">
+                  <h1>Resumen</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia itaque maiores veniam nam ab quas repellat enim,
+                    quam tempora rem dolores vel quod est voluptate temporibus
+                    reiciendis dolorem ipsa tempore. Lorem, ipsum dolor sit amet
+                    consectetur adipisicing elit. Ut vitae et fuga delectus
+                    minus, adipisci nostrum tempore alias nihil quod earum dicta
+                    eius, reprehenderit accusamus, officia tempora id. Voluptas,
+                    cupiditate.
+                  </p>
+                </div>
+                <div class="card__descripcion__img">
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/profesor.jpg"
+                      alt="Profesor"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/tokio.jpg" alt="Tokio" />
+                  </div>
+                  <div class="person">
+                    <img
+                      class="image-card"
+                      src="src/inspectora.jpg"
+                      alt="Inspectora"
+                    />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/denver.jpg" alt="Denver" />
+                  </div>
+                  <div class="person">
+                    <img class="image-card" src="src/berlin.jpg" alt="Berlin" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

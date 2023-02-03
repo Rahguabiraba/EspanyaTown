@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img src="src/logo_vermelho.png" alt="Logo" class="logo" onclick="backIndex()" />
+        <nav class="navegation">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="formulario-login">
+        <div class="main">
+          <input type="checkbox" id="chk" aria-hidden="true" />
+          <div class="signup">
+            <form>
+              <label for="chk" aria-hidden="true" class="label-login"
+                >Sign up</label
+              >
+              <input
+                type="text"
+                name="txt"
+                placeholder="User name"
+                required=""
+                class="input-login"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+                class="input-login"
+              />
+              <input
+                type="password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+                class="input-login"
+              />
+              <button class="button-login">Sign up</button>
+            </form>
+          </div>
+
+          <div class="login">
+            <form>
+              <label for="chk" aria-hidden="true" class="label-login"
+                >Login</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+                class="input-login"
+              />
+              <input
+                type="password"
+                name="pswd"
+                placeholder="Password"
+                required=""
+                class="input-login"
+              />
+              <button class="button-login">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
