@@ -34,26 +34,26 @@ function backIndex() {
   window.location.replace("index.html")
 }
 
-// Get the modal
+// Recuperamos el modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+// Recuperamos el botón que va abrir el modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
+// Recuperamos el Spam que va cerrar el modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// Cuando clicamos sobre el boton, se abrirá el modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// Cuando clicamos sobre el spam, el modal cerrará
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// Cuando clicamos sobre el modal
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

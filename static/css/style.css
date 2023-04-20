@@ -74,7 +74,7 @@ header .navegation li {
   list-style: none;
 }
 
-header .navegation li a {
+header .navegation li div {
   color: #fff;
   display: inline-block;
   text-decoration: none;
@@ -88,13 +88,14 @@ header .navegation li a {
   transition: 0.4s ease-in-out;
 }
 
-header .navegation li a:hover {
+header .navegation li div:hover {
   display: inline-block;
   border-style: solid;
   border-radius: 40px;
   padding: 10px 10px 10px 10px;
   border-color: #e51e2a;
   transform: translateY(-10px);
+  cursor: pointer;
 }
 
 .logo {

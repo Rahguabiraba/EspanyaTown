@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
   </head>
   <body>
     <div class="section">
       <div class="circle"></div>
       <header>
-        <img src="src/logo_vermelho.png" alt="Logo" class="logo" onclick="backIndex()">
+        <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo" onclick="backIndex()">
         <nav class="navegation">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><div onclick="registrar()">Inicio</div></li>
+            <!-- <li><a href="#">Inicio</a></li> -->
             <li><a href="login.html">Login</a></li>
             <li><a href="about.html">Acerca de</a></li>
           </ul>
@@ -37,20 +38,20 @@
       <ul class="icons">
         <li>
           <a href="#"
-            ><img src="src/facebook.png" alt="icons" width="24px"
+            ><img src="{{url_for('static',filename='src/facebook.png')}}" alt="icons" width="24px"
           /></a>
         </li>
         <li>
-          <a href="#"><img src="src/twitter.png" alt="icons" width="24px" /></a>
+          <a href="#"><img src="{{url_for('static',filename='src/twitter.png')}}" alt="icons" width="24px" /></a>
         </li>
         <li>
           <a href="#"
-            ><img src="src/instagram.png" alt="icons" width="24px"
+            ><img src="{{url_for('static',filename='src/instagram.png')}}" alt="icons" width="24px"
           /></a>
         </li>
       </ul>
       <div class="boxImg">
-        <img src="src/palomitas.png" alt="Palomitas" class="img1">
+        <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
       </div>
     </div>
   </body>
