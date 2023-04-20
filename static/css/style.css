@@ -419,21 +419,8 @@ header .navegation li div:hover {
   color: #121212;
 }
 
-.generos {
-  display: flex;
-  width: 80%;
-}
-
-.generos input {
-  height: 30px;
-  width: 3.5em;
-}
-
-.generos h3 {
-  display: flex;
-  align-items: center;
-  width: 60%;
-  color: #fff;
+#generos_list{
+  font-size: 2em;
 }
 
 .part-form textarea {

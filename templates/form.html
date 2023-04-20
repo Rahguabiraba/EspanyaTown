@@ -47,15 +47,16 @@
         <div id="part4" class="part-form reveal">
           <label for="generos">Seleccione el genero que más te gusta</label>
           <br />
-          <div class="generos">
-            <input type="radio" name="suspense" id="suspense" />
-            <h3>Suspense</h3>
-            <input type="radio" name="romance" id="romance" />
-            <h3>Romance</h3>
-            <input type="radio" name="comedia" id="comedia" />
-            <h3>Comedia</h3>
-            <input type="radio" name="historia" id="historia" />
-            <h3>Historia</h3>
+          <div>
+            <select id="generos_list" name="generoslist" form="form">
+              <option value="accion">Acción</option>
+              <option value="aventura">Aventura</option>
+              <option value="comedia">Comedia</option>
+              <option value="drama">Drama</option>
+              <option value="suspense">Suspense</option>
+              <option value="comedia_romantica">Comedia Romantica</option>
+              <option value="musical">Musical</option>
+            </select>
           </div>
           <div class="button">
             <a href="#part3">VOLVER</a>
