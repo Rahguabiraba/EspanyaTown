@@ -11,13 +11,12 @@
     <div class="section">
       <div class="circle"></div>
       <header>
-        <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo" onclick="backIndex()">
+        <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo" onclick="inicio()">
         <nav class="navegation">
           <ul>
-            <li><div onclick="registrar()">Inicio</div></li>
-            <!-- <li><a href="#">Inicio</a></li> -->
-            <li><a href="login.html">Login</a></li>
-            <li><a href="about.html">Acerca de</a></li>
+            <li><div onclick="inicio()">Inicio</div></li>
+            <li><div onclick="login()">Login</div></li>
+            <li><div onclick="about()">Acerca de</a></li>
           </ul>
         </nav>
       </header>
@@ -31,7 +30,7 @@
             ¿Quieres saber cómo encontrar tu película perfecta? ¿Qué
             te parece si te paso un listado? ¡Complete el formulario y reciba
             una muestra gratis!<p>
-            <a href="form.html">COMENZAR</a>
+              <div onclick="form()">COMENZAR</div>
           </p>
         </div>
       </div>
@@ -54,5 +53,6 @@
         <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
       </div>
     </div>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
   </body>
 </html>

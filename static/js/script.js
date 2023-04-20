@@ -1,3 +1,24 @@
+//Funcion abrir la pagina de inicio del menu
+function inicio() {
+  location.replace("/");
+};
+
+function login() {
+  location.replace("/login");
+};
+
+function form() {
+  location.replace("/formulario");
+};
+
+function list() {
+  location.replace("/lista");
+};
+
+function about() {
+  location.replace("/acerca_de");
+};
+//Funcion para activar el modo scrool reveal en Formulario
 window.addEventListener("scroll", reveal);
 
 function reveal() {
@@ -38,7 +59,8 @@ function backIndex() {
 var modal = document.getElementById("myModal");
 
 // Recuperamos el botón que va abrir el modal
-var btn = document.getElementById("myBtn");
+  var btn = document.getElementById("myBtn");
+
 
 // Recuperamos el Spam que va cerrar el modal
 var span = document.getElementsByClassName("close")[0];
@@ -53,7 +75,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// Cuando clicamos sobre el modal
+// Cuando clicamos sobre el span, el modal cerrará
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acerca de</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
   </head>
   <body>
     <section>
       <div class="circle"></div>
       <header>
         <img
-          src="src/logo_vermelho.png"
+          src="{{url_for('static',filename='src/logo_vermelho.png')}}"
           alt="Logo"
           class="logo"
-          onclick="backIndex()"
+          onclick="inicio()"
         />
         <nav class="navegation">
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="#">Acerca de</a></li>
+            <li><div onclick="inicio()">Inicio</div></li>
+            <li><div onclick="login()">Login</div></li>
+            <li><div onclick="about()">Acerca de</div></li>
           </ul>
         </nav>
       </header>
-      <img src="src/logo_vermelho.png" alt="Logo" class="logo-about" />
+      <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo-about" />
       <div class="texto-about">
         <h1>Nuestro proyecto</h1>
         <p>
@@ -44,5 +44,6 @@
         <h6>Versión 1.0</h6>
       </div>
     </section>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
   </body>
 </html>

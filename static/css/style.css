@@ -147,7 +147,7 @@ header .navegation li div:hover {
 }
 
 /****** BOTÓN PARA INICIAR LA PETICIÓN DEL FORMULARIO ******/
-.container .text a {
+.container .text div {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 25px;
@@ -164,10 +164,11 @@ header .navegation li div:hover {
   transition: 0.3s ease-in-out;
 }
 
-.container .text a:hover {
+.container .text div:hover {
   transform: translateY(-10px);
   background: transparent;
   border-color: #e51e2a;
+  cursor: pointer;
 }
 
 /****** ICONOS DE REDES SOCIALES ******/
