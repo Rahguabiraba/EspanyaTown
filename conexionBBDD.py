@@ -1,8 +1,23 @@
-import sqlite3
+import sqlite3 as sql
 
-try:
-    conector = sqlite3.connect("database/cinema")
-    cursor = conector.cursor()
-    cursor.execute("CREATE TABLE prueba (nombre VARCHAR(50), edad INTEGER)")
-except Exception as ex:
-    print(ex)
+
+def registrarPelicula(request):
+    # Pasamos la respuesta del formulario a una variable
+    respuesta = request.form
+
+    # Pasar las informaciones del formulario a las variables
+    nombre = respuesta['nombre']
+    correo = respuesta['correo']
+    edad = respuesta['edad']
+    genero = respuesta['genero']
+    comentario = respuesta['comentario']
+
+    try:
+        conector = sql.connect("database/cinema.db")
+        cursor = conector.cursor()
+        cursor.execute(f"INSERT INTO formulario (nombre,correo,edad,genero,comentarios) VALUES ('{nombre}','{correo}','{edad}','{genero}','{comentario}')")
+        conector.commit()
+        conector.close()
+        return
+    except Exception as ex:
+        print(ex)

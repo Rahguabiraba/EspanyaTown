@@ -1,4 +1,5 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request, redirect, url_for
+from conexionBBDD import registrarPelicula
 
 app = Flask(__name__)
 
@@ -10,11 +11,22 @@ def paginaInicio():
 def paginaLogin():
     return render_template("login.html")
 
-@app.route("/formulario")
+@app.route("/formulario", methods=['GET'])
 def paginaFormulario():
     return render_template("form.html")
 
-@app.route("/lista")
+@app.route("/enviarDatosPeli", methods=["GET","POST"])
+def registrarPeli():
+    try:
+        if request.method == 'POST':
+            registrarPelicula(request)
+            return redirect(url_for("paginaLista"))
+        else:
+            return render_template("form.html")
+    except:
+        return render_template("form.html")
+
+@app.route("/lista", methods=["GET", "POST"])
 def paginaLista():
     return render_template("list.html")
 
