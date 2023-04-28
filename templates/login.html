@@ -29,55 +29,55 @@
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div class="signup">
-            <form>
+            <form action="/registrarUsuario" method="POST">
               <label for="chk" aria-hidden="true" class="label-login"
-                >Sign up</label
+                >Registrarse</label
               >
               <input
                 type="text"
-                name="txt"
-                placeholder="User name"
+                name="usuario"
+                placeholder="Nombre de Usuario"
                 required=""
                 class="input-login"
               />
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Correo Electrónico"
                 required=""
                 class="input-login"
               />
               <input
                 type="password"
-                name="pswd"
-                placeholder="Password"
+                name="contrasenya"
+                placeholder="Contraseña"
                 required=""
                 class="input-login"
               />
-              <button class="button-login">Sign up</button>
+              <input type="submit" value="Entrar" class="button-login">
             </form>
           </div>
 
           <div class="login">
-            <form>
+            <form action="/loginUsuario" method="POST">
               <label for="chk" aria-hidden="true" class="label-login"
                 >Login</label
               >
               <input
                 type="email"
-                name="email"
-                placeholder="Email"
+                name="emailLogin"
+                placeholder="Correo Electrónico"
                 required=""
                 class="input-login"
               />
               <input
                 type="password"
-                name="pswd"
-                placeholder="Password"
+                name="passwordLogin"
+                placeholder="Contraseña"
                 required=""
                 class="input-login"
               />
-              <button class="button-login">Login</button>
+              <input type="submit" value="Entrar" class="button-login">
             </form>
           </div>
         </div>
