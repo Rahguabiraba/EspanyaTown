@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>User Info</title>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img
+          src="{{url_for('static',filename='src/logo_vermelho.png')}}"
+          alt="Logo"
+          class="logo"
+          onclick="inicio()"
+        />
+        <nav class="navegation">
+          <ul>
+            <li><div onclick="inicio()">Inicio</div></li>
+            <li><div onclick="login()">Login</div></li>
+            <li><div onclick="about()">Acerca de</div></li>
+            <li>
+              <div id="dropdown">
+                <img
+                  id="dropimage"
+                  src="{{url_for('static',filename='src/login.jpg')}}"
+                  alt="icon_login"
+                />
+                <div id="dropdown-content">
+                  <a onclick="userinfo()">Datos Usuario</a>
+                  <a onclick="resetpass()">Cambiar Contraseña</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="info">
+          <h2>Nombre</h2>
+          <p>Ramon</p>
+        </div>
+        <div class="info">
+          <h2>Correo</h2>
+          <p>ramonguabiraba@hotmail.com</p>
+        </div>
+        <form action="">
+          <input id="button-pass" type="button" value="VER LISTADO">
+        </form>
+      </main>
+    </section>
+    <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+  </body>
+</html>

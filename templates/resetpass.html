@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>Reset Password</title>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <img
+          src="{{url_for('static',filename='src/logo_vermelho.png')}}"
+          alt="Logo"
+          class="logo"
+          onclick="inicio()"
+        />
+        <nav class="navegation">
+          <ul>
+            <li><div onclick="inicio()">Inicio</div></li>
+            <li><div onclick="login()">Login</div></li>
+            <li><div onclick="about()">Acerca de</div></li>
+            <li>
+              <div id="dropdown">
+                <img
+                  id="dropimage"
+                  src="{{url_for('static',filename='src/login.jpg')}}"
+                  alt="icon_login"
+                />
+                <div id="dropdown-content">
+                  <a onclick="userinfo()">Datos Usuario</a>
+                  <a onclick="resetpass()">Cambiar Contraseña</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <form id="form" method="POST" action="/lista">
+          <div id="part1" class="part-form-top">
+            <label for="name">Tu nueva contraseña</label> <br />
+            <input type="text" name="nueva_contrasenya" id="name" class="name" required />
+            <div class="button">
+              <a href="#part2">SIGUIENTE</a>
+            </div>
+          </div>
+          <div id="part2" class="part-form reveal">
+            <label for="mail">Confirme la contraseña</label> <br />
+            <input type="email" name="confirm_contrasenya" id="mail" required />
+            <div class="button">
+              <a href="#part1">VOLVER</a>
+              <div class="button-submit">
+                <input type="submit" id="confirmarcontrasenya" name="confirmarcontrasenya" value="Enviar" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+    </section>
+    <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/form.js')}}"></script>
+  </body>
+</html>

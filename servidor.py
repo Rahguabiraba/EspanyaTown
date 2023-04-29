@@ -89,6 +89,15 @@ def traducirPaginas():
     except:
         return render_template("form.html")
 
+#Ruta para abrir pagina Informaciones de Usuario
+@app.route("/informacionUsuario")
+def infoUser():
+    return render_template("userinfo.html")
+
+#Ruta para abrir pagina Inicial
+@app.route("/cambiarContrasenya")
+def resetpass():
+    return render_template("resetpass.html")
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.run(host='localhost', port=3000, debug=True)

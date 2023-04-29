@@ -34,16 +34,19 @@
           </p>
         </div>
       </div>
-      <form action="/traduccion" class="form-index" id="form-index">
         <ul class="icons">
           <li>
-            <input type="button" class="icon" name="es" value="ES">
+            <form action="/traduccion-es" method="POST" id="form-es">
+              <input type="button" class="icon" name="es" value="ES">
+            </form>
           </li>
           <li>
-            <input type="button" class="icon" name="ch" value="CH">
+            <form action="/traduccion-zh-cn" method="POST" id="form-ch">
+              <input type="button" class="icon" name="ch" value="CH">
+            </form>
+            
           </li>
         </ul>
-      </form>
       <div class="boxImg">
         <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
       </div>

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acerca de</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
   </head>
   <body>
     <section>
@@ -25,23 +28,28 @@
           </ul>
         </nav>
       </header>
-      <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo-about" />
-      <div class="texto-about">
-        <h1>Nuestro proyecto</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ipsum
-          adipisci cumque, reiciendis optio eveniet dolore quos temporibus! Sed
-          quam quaerat quia labore. Eligendi, numquam autem nostrum natus porro
-          suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Nesciunt fuga tempore, dolore accusamus veritatis ea? Explicabo magnam
-          blanditiis accusamus officiis earum odit, laudantium numquam nulla ab.
-          Ab labore error in. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Delectus alias nihil soluta quidem voluptas minus,
-          totam necessitatibus quas aliquid et dignissimos aliquam dolorem
-          voluptatum cumque iusto quam voluptatem quae eligendi.
-        </p>
-        <h5>Desenvolvido por Ramon Guabiraba</h5>
-        <h6>Versión 1.0</h6>
+      <div class="container-about">
+        <img
+          src="{{url_for('static',filename='src/logo_vermelho.png')}}"
+          alt="Logo"
+          class="logo-about"
+        />
+        <div class="texto-about">
+          <h1>Nuestro proyecto</h1>
+          <p>
+            El objetivo del proyecto es muy simple: ayudar a los chinos a
+            enterarse un poco de la cultura occidental. Muchos chinos cuando que
+            llegan a nuestro país ya tienen un objetivo muy claro. Muchos vienen
+            a trabajo, estudios o simplemente vacaciones. Nosotros siempre
+            partimos del presupuesto que aprender chino es difícil. Pero no
+            paramos para pensar que para ellos entender nuestro idioma y cultura
+            también cuesta. Entonces la idea es presentar nuestra cultura para
+            los chinos de una forma diferente: utilizando películas de los más
+            variados tipos.
+          </p>
+          <h5>Desenvolvido por Ramon Guabiraba</h5>
+          <h6>Versión 1.0</h6>
+        </div>
       </div>
     </section>
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>

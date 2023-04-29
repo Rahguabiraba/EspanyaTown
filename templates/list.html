@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listado</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
     <script src="https://kit.fontawesome.com/9d699014b9.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.0.js"
@@ -28,19 +31,34 @@
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
             <li><div onclick="about()">Acerca de</div></li>
+            <li>
+              <div id="dropdown">
+                <img
+                  id="dropimage"
+                  src="{{url_for('static',filename='src/login.jpg')}}"
+                  alt="icon_login"
+                />
+                <div id="dropdown-content">
+                  <a onclick="userinfo()">Datos Usuario</a>
+                  <a onclick="resetpass()">Cambiar Contraseña</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
       </header>
       <div class="titulo"><h1>Lista de Peliculas</h1></div>
       <div class="contenedor">
         <div class="card1">
-          <div class="numeracion"><h1>1</h1></div>
           <div class="card-movies">
             <div class="card__banner">
               <div class="background">
                 <div class="c-background">
                   <div class="card__poster">
-                    <img src="{{url_for('static',filename='src/poster.jpg')}}" alt="Poster" />
+                    <img
+                      src="{{url_for('static',filename='src/poster.jpg')}}"
+                      alt="Poster"
+                    />
                   </div>
                   <div class="card__banner__content">
                     <div class="__content">
@@ -48,7 +66,9 @@
                       <p class="__content--subtitle">
                         Crimen, Drama - 1h 10min
                       </p>
-                      <button class="__content--btn" id="myBtn">Ver tráiler</button>
+                      <button class="__content--btn" id="myBtn">
+                        Ver tráiler
+                      </button>
                       <div class="__content--widgets">
                         <i class="fas fa-list-ul"></i>
                         <i class="fas fa-share-alt"></i>
@@ -59,7 +79,10 @@
                   </div>
                 </div>
               </div>
-              <img src="{{url_for('static',filename='src/banner.jpg')}}" alt="Banner" />
+              <img
+                src="{{url_for('static',filename='src/banner.jpg')}}"
+                alt="Banner"
+              />
               <div class="drop">
                 <i
                   class="fas fa-chevron-circle-down"
@@ -102,168 +125,18 @@
                     />
                   </div>
                   <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/denver.jpg')}}" alt="Denver" />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/berlin.jpg')}}" alt="Berlin" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card2">
-          <div class="card-movies">
-            <div class="card__banner">
-              <div class="background">
-                <div class="c-background">
-                  <div class="card__poster">
-                    <img src="{{url_for('static',filename='src/poster.jpg')}}" alt="Poster" />
-                  </div>
-                  <div class="card__banner__content">
-                    <div class="__content">
-                      <h3 class="__content--title">La casa de papel</h3>
-                      <p class="__content--subtitle">
-                        Crimen, Drama - 1h 10min
-                      </p>
-                      <button class="__content--btn">Ver tráiler</button>
-                      <div class="__content--widgets">
-                        <i class="fas fa-list-ul"></i>
-                        <i class="fas fa-share-alt"></i>
-                        <i class="fas fa-bookmark"></i>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="{{url_for('static',filename='src/banner.jpg')}}" alt="Banner" />
-              <div class="drop">
-                <i
-                  class="fas fa-chevron-circle-down"
-                  id="boton2-drop"
-                  onclick="buttonDrop2()"
-                ></i>
-              </div>
-            </div>
-            <div class="card__descripcion" id="drop2-descripcion">
-              <div class="c-card__descripcion">
-                <div class="card__descripcion__texto">
-                  <h1>Resumen</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Officia itaque maiores veniam nam ab quas repellat enim,
-                    quam tempora rem dolores vel quod est voluptate temporibus
-                    reiciendis dolorem ipsa tempore. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Ut vitae et fuga delectus
-                    minus, adipisci nostrum tempore alias nihil quod earum dicta
-                    eius, reprehenderit accusamus, officia tempora id. Voluptas,
-                    cupiditate.
-                  </p>
-                </div>
-                <div class="card__descripcion__img">
-                  <div class="person">
                     <img
                       class="image-card"
-                      src="{{url_for('static',filename='src/profesor.jpg')}}"
-                      alt="Profesor"
+                      src="{{url_for('static',filename='src/denver.jpg')}}"
+                      alt="Denver"
                     />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/tokio.jpg')}}" alt="Tokio" />
                   </div>
                   <div class="person">
                     <img
                       class="image-card"
-                      src="{{url_for('static',filename='src/inspectora.jpg')}}"
-                      alt="Inspectora"
+                      src="{{url_for('static',filename='src/berlin.jpg')}}"
+                      alt="Berlin"
                     />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/denver.jpg')}}" alt="Denver" />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/berlin.jpg')}}" alt="Berlin" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="numeracion"><h1>2</h1></div>
-        </div>
-        <div class="card3">
-          <div class="numeracion"><h1>3</h1></div>
-          <div class="card-movies">
-            <div class="card__banner">
-              <div class="background">
-                <div class="c-background">
-                  <div class="card__poster">
-                    <img src="{{url_for('static',filename='src/poster.jpg')}}" alt="Poster" />
-                  </div>
-                  <div class="card__banner__content">
-                    <div class="__content">
-                      <h3 class="__content--title">La casa de papel</h3>
-                      <p class="__content--subtitle">
-                        Crimen, Drama - 1h 10min
-                      </p>
-                      <button class="__content--btn">Ver tráiler</button>
-                      <div class="__content--widgets">
-                        <i class="fas fa-list-ul"></i>
-                        <i class="fas fa-share-alt"></i>
-                        <i class="fas fa-bookmark"></i>
-                        <i class="fas fa-heart"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img src="{{url_for('static',filename='src/banner.jpg')}}" alt="Banner" />
-              <div class="drop">
-                <i
-                  class="fas fa-chevron-circle-down"
-                  id="boton3-drop"
-                  onclick="buttonDrop3()"
-                ></i>
-              </div>
-            </div>
-            <div class="card__descripcion" id="drop3-descripcion">
-              <div class="c-card__descripcion">
-                <div class="card__descripcion__texto">
-                  <h1>Resumen</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Officia itaque maiores veniam nam ab quas repellat enim,
-                    quam tempora rem dolores vel quod est voluptate temporibus
-                    reiciendis dolorem ipsa tempore. Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Ut vitae et fuga delectus
-                    minus, adipisci nostrum tempore alias nihil quod earum dicta
-                    eius, reprehenderit accusamus, officia tempora id. Voluptas,
-                    cupiditate.
-                  </p>
-                </div>
-                <div class="card__descripcion__img">
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/profesor.jpg')}}"
-                      alt="Profesor"
-                    />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/tokio.jpg')}}" alt="Tokio" />
-                  </div>
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/inspectora.jpg')}}"
-                      alt="Inspectora"
-                    />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/denver.jpg')}}" alt="Denver" />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/berlin.jpg')}}" alt="Berlin" />
                   </div>
                 </div>
               </div>
@@ -280,11 +153,12 @@
         </div>
       </div>
     </section>
-    <input type="hidden" name="alert" id="alert" value="{{ data }}">
+    <input type="hidden" name="alert" id="alert" value="{{ data }}" />
     {% for datos in user %}
-    <input type="hidden" name="user" id="user" value="{{ datos }}">
+    <input type="hidden" name="user" id="user" value="{{ datos }}" />
     {% endfor %}
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/list.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
   </body>
 </html>

@@ -67,3 +67,8 @@ def validarUsuario(request):
         
     except Exception as ex:
         print(ex)
+
+# def cambiarContrasenya(request):
+
+
+# def mostrarInfoUsuario():
