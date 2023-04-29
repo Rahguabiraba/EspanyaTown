@@ -20,7 +20,7 @@
           </ul>
         </nav>
       </header>
-      <form action="/enviarDatosPeli" method="POST" id="form">
+      <form id="form" method="POST" action="/enviarDatosPeli">
         <div id="part1" class="part-form-top">
           <label for="name">¿Tu nombre?</label> <br />
           <input type="text" name="nombre" id="name" class="name" required />
@@ -75,7 +75,7 @@
           <div class="button">
             <a href="#part4">VOLVER</a>
             <div class="button-submit">
-              <input type="submit" name="enviar" value="Enviar" />
+              <input type="submit" id="altagenero" name="enviar" value="Enviar" />
             </div>
           </div>
         </div>
@@ -83,5 +83,6 @@
     </section>
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/form.js')}}"></script>
+    <script src="{{url_for('static',filename='js/altagenero.js')}}"></script>
   </body>
 </html>

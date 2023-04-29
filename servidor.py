@@ -30,10 +30,8 @@ def registrarUser():
 def validarUser():
     try:
         if request.method == 'POST':
-            print(request.method)
             datosUsuario = validarUsuario(request)
-            print(datosUsuario)
-            return redirect(url_for("paginaLista"))
+            return redirect(url_for("paginaLista",user=datosUsuario))
         else:
             return render_template("login.html")
     except:
@@ -49,8 +47,10 @@ def paginaFormulario():
 def registrarPeli():
     try:
         if request.method == 'POST':
+            #Enviamos los datos del formulario a nuestra base de datos
             registrarPelicula(request)
-            return redirect(url_for("paginaLista"))
+            alert = "¡Registro Finalizado!"
+            return redirect(url_for("paginaLista",data=alert))
         else:
             return render_template("form.html")
     except:
@@ -59,12 +59,36 @@ def registrarPeli():
 #Ruta para abrir pagina de Listado de Peliculas
 @app.route("/lista", methods=["GET", "POST"])
 def paginaLista():
-    return render_template("list.html")
+    if request.args.get("data"):
+        alert = request.args.get("data")
+        return render_template("list.html",data=alert)
+    elif request.args.get("user"):
+        usuario = request.args.get("user")
+        lista = list(usuario)
+        print(lista)
+        return render_template("list.html",user=usuario)
+    else:
+        return render_template("list.html")
 
 #Ruta para abrir pagina de Acerca de
 @app.route("/acerca_de")
 def paginaAcercaDe():
     return render_template("about.html")
+
+#Ruta para traducir paginas
+@app.route("/traduccion",methods=["GET","POST"])
+def traducirPaginas():
+    try:
+        if request.method == 'POST':
+            #Enviamos los datos del formulario a nuestra base de datos
+            registrarPelicula(request)
+            alert = "¡Registro Finalizado!"
+            return redirect(url_for("paginaLista",data=alert))
+        else:
+            return render_template("form.html")
+    except:
+        return render_template("form.html")
+
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.run(host='localhost', port=3000, debug=True)
