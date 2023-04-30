@@ -25,7 +25,7 @@
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
             <li><div onclick="about()">Acerca de</div></li>
-            <li>
+            <li id="logon">
               <div id="dropdown">
                 <img
                   id="dropimage"
@@ -44,14 +44,14 @@
       <main>
         <div class="info">
           <h2>Nombre Usuario</h2>
-          <p>Ramon</p>
+          <p id="cookieuser"></p>
         </div>
         <div class="info">
           <h2>Correo</h2>
-          <p>ramonguabiraba@hotmail.com</p>
+          <p id="cookieemail"></p>
         </div>
-        <form action="">
-          <input id="button-pass" type="button" value="VER LISTADO" />
+        <form action="/lista" method="POST">
+          <input type="submit" id="button-pass" value="VER LISTADO" />
         </form>
       </main>
     </section>
@@ -65,5 +65,6 @@
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='js/cookieinfo.js')}}"></script>
   </body>
 </html>
