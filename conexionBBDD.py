@@ -18,7 +18,7 @@ def registrarPelicula(request):
         cursor.execute(f"INSERT INTO formulario (nombre,correo,edad,genero,comentarios) VALUES ('{nombre}','{correo}','{edad}','{genero}','{comentario}')")
         conector.commit()
         conector.close()
-        return
+        return genero
     except Exception as ex:
         print(ex)
 

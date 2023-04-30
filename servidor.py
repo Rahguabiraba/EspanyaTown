@@ -73,9 +73,9 @@ def registrarPeli():
     try:
         if request.method == 'POST':
             #Enviamos los datos del formulario a nuestra base de datos
-            registrarPelicula(request)
+            genero = registrarPelicula(request)
             alert = "¡Registro Finalizado!"
-            return redirect(url_for("paginaLista",data=alert))
+            return redirect(url_for("paginaLista",data=alert,genero=genero))
         else:
             return render_template("form.html")
     except:
@@ -86,7 +86,8 @@ def registrarPeli():
 def paginaLista():
     if request.args.get("data"):
         alert = request.args.get("data")
-        return render_template("list.html",data=alert)
+        genero = request.args.get("genero")
+        return render_template("list.html",data=alert,genero=genero)
     elif request.args.get("iduser"):
         idusuario = request.args.get("iduser")
         usuario = request.args.get("username")

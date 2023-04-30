@@ -70,12 +70,6 @@
                       <button class="__content--btn" id="myBtn">
                         Ver tráiler
                       </button>
-                      <div class="__content--widgets">
-                        <i class="fas fa-list-ul"></i>
-                        <i class="fas fa-share-alt"></i>
-                        <i class="fas fa-bookmark"></i>
-                        <i class="fas fa-heart"></i>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -86,13 +80,12 @@
               />
               <div class="drop">
                 <i
-                  class="fas fa-chevron-circle-down"
-                  id="boton1-drop"
-                  onclick="buttonDrop1()"
+                  class="fas fa-chevron-circle-down boton-drop"
+                  onclick="buttonDrop()"
                 ></i>
               </div>
             </div>
-            <div class="card__descripcion" id="drop1-descripcion">
+            <div class="card__descripcion drop-descripcion">
               <div class="c-card__descripcion">
                 <div class="card__descripcion__texto">
                   <h1>Resumen</h1>
@@ -107,50 +100,9 @@
                     cupiditate.
                   </p>
                 </div>
-                <div class="card__descripcion__img">
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/profesor.jpg')}}"
-                      alt="Profesor"
-                    />
-                  </div>
-                  <div class="person">
-                    <img class="image-card" src="{{url_for('static',filename='src/inspectora.jpg')}}" alt="Tokio" />
-                  </div>
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/inspectora.jpg')}}"
-                      alt="Inspectora"
-                    />
-                  </div>
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/denver.jpg')}}"
-                      alt="Denver"
-                    />
-                  </div>
-                  <div class="person">
-                    <img
-                      class="image-card"
-                      src="{{url_for('static',filename='src/berlin.jpg')}}"
-                      alt="Berlin"
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- El Modal -->
-      <div id="myModal" class="modal">
-        <!-- EL contenido del Modal -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
         </div>
       </div>
     </section>
@@ -160,11 +112,13 @@
     <input type="hidden" name="iduser" id="iduser" value="{{ id }}" />
     <input type="hidden" name="user" id="user" value="{{ user }}" />
     <input type="hidden" name="email" id="email" value="{{ email }}" />
+    <input type="hidden" name="genero" id="genero" value="{{ genero }}" />
 
     <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/list.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='js/api.js')}}"></script>
   </body>
 </html>
