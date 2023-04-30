@@ -5,4 +5,10 @@ function userinfo() {
   function resetpass() {
     location.replace("/cambiarContrasenya");
   }
+
+  function deleteuser() {
+    document.cookie = "username="
+    document.cookie = "correo="
+    location.replace("/lista");
+  }
   
