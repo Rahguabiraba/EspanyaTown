@@ -7,6 +7,7 @@ function userinfo() {
   }
 
   function deleteuser() {
+    document.cookie = "iduser="
     document.cookie = "username="
     document.cookie = "correo="
     location.replace("/lista");

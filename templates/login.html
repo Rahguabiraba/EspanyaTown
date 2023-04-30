@@ -42,7 +42,7 @@
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div class="signup">
-            <form action="/registrarUsuario" method="POST">
+            <form action="/registrarUsuario" method="POST" class="form-register">
               <label for="chk" aria-hidden="true" class="label-login"
                 >Registrarse</label
               >
@@ -63,7 +63,7 @@
                 class="input-login"
               />
               <input
-                type="password"
+                type="text"
                 id="contrasenya"
                 name="contrasenya"
                 placeholder="Contraseña"
@@ -75,7 +75,7 @@
           </div>
 
           <div class="login">
-            <form action="/loginUsuario" method="POST">
+            <form action="/loginUsuario" method="POST" class="form-login">
               <label for="chk" aria-hidden="true" class="label-login"
                 >Login</label
               >
@@ -103,6 +103,7 @@
     </section>
     
     <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="alert" id="alert" value="{{ data }}" />
     <input type="hidden" name="user" id="user" value="{{ user }}" />
     <input type="hidden" name="email" id="email" value="{{ email }}" />
 

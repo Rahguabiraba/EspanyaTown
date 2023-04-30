@@ -723,36 +723,53 @@ header .navegation li div:hover {
   font-size: 2.3em;
   justify-content: center;
   display: flex;
-  margin: 60px;
+  margin: 40px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
 .input-login {
   width: 60%;
-  height: 40px;
-  background: #fff;
-  justify-content: center;
+  height: 50px;
+  padding-bottom: 10px;
+  border-style: none none solid;
+  border-width: 1px 1px 2px;
+  border-color: #000 #000 #fff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.input-login::placeholder {
+  color: #fff;
+  opacity: 70%;
+}
+
+.form-register {
   display: flex;
-  margin: 20px auto;
-  padding: 0px 10px 0px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button-register {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  padding: 10px 25px;
+  padding: 10px 90px;
   background: #e51e2a;
   border-style: solid;
   border-color: transparent;
   box-shadow: 0 5px 30px 0 rgb(230 31 87 / 50%);
   color: #fff;
   font-weight: 500;
+  font-size: 1em;
   text-decoration: none;
   letter-spacing: 1px;
   border-radius: 40px;
@@ -763,13 +780,14 @@ header .navegation li div:hover {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  padding: 10px 25px;
-  background: #e51e2a;
+  padding: 10px 90px;
+  background: #fff;
   border-style: solid;
   border-color: transparent;
   box-shadow: 0 5px 30px 0 rgb(230 31 87 / 50%);
-  color: #fff;
+  color: #e51e2a;
   font-weight: 500;
+  font-size: 1em;
   text-decoration: none;
   letter-spacing: 1px;
   border-radius: 40px;
@@ -785,8 +803,10 @@ header .navegation li div:hover {
 
 .button-login:hover {
   transform: translateY(-10px);
+  box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-color: #fff;
   background: transparent;
-  border-color: #e51e2a;
   cursor: pointer;
 }
 
@@ -794,7 +814,7 @@ header .navegation li div:hover {
   height: 780px;
   background: #e51e2a;
   border-radius: 50%;
-  transform: translateY(-200px);
+  transform: translateY(-90px);
   transition: 0.8s ease-in-out;
 }
 .login .label-login {

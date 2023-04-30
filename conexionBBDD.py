@@ -56,19 +56,40 @@ def validarUsuario(request):
         datos = cursor.fetchall()
         conector.commit()
         conector.close()
-
+        
+        #Creamos el codigo de error
+        codigo = "404"
         if len(datos) > 0 :
             if datos[0][3] == password:
                 return datos
             else :
-                return "Usuario o contraseña invalido"
+                return codigo
         else :
-            return "Usuario o contraseña invalido"
+            return codigo
         
     except Exception as ex:
         print(ex)
 
-# def cambiarContrasenya(request):
+def validarPassword(request):
+        # Pasamos la respuesta del formulario a una variable
+    respuesta = request.form
 
+    # Pasar las informaciones del formulario a las variables
+    iduser = respuesta['iduser']
+    newpass = respuesta['nueva_contrasenya']
+    confirmpass = respuesta['confirm_contrasenya']
 
-# def mostrarInfoUsuario():
+    if newpass == confirmpass:
+        try:
+            conector = sql.connect("database/cinema.db")
+            cursor = conector.cursor()
+            cursor.execute(f"UPDATE usuarios SET contrasenya='{newpass}' WHERE iduser='{iduser}'")
+            conector.commit()
+            conector.close()
+            alert = "¡Contraseña cambiada correctamente!"
+            return alert
+        except Exception as ex:
+            print(ex)
+    else:
+        codigo = "404"
+        return codigo

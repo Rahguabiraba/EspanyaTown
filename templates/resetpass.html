@@ -43,20 +43,21 @@
         </nav>
       </header>
       <main>
-        <form id="form" method="POST" action="/lista">
+        <form id="form" method="POST" action="/cambiarPassword">
           <div id="part1" class="part-form-top">
-            <label for="name">Tu nueva contraseña</label> <br />
-            <input type="text" name="nueva_contrasenya" id="name" class="name" required />
+            <label for="nueva_contrasenya">Tu nueva contraseña</label> <br />
+            <input type="text" name="nueva_contrasenya" id="nueva_contrasenya" class="name" required />
             <div class="button">
               <a href="#part2">SIGUIENTE</a>
             </div>
           </div>
           <div id="part2" class="part-form reveal">
-            <label for="mail">Confirme la contraseña</label> <br />
-            <input type="email" name="confirm_contrasenya" id="mail" required />
+            <label for="confirm_contrasenya">Confirme la contraseña</label> <br />
+            <input type="text" name="confirm_contrasenya" id="confirm_contrasenya" required />
             <div class="button">
               <a href="#part1">VOLVER</a>
               <div class="button-submit">
+                <input type="hidden" name="iduser" id="iduser" value="" />
                 <input type="submit" id="confirmarcontrasenya" name="confirmarcontrasenya" value="Enviar" />
               </div>
             </div>
@@ -66,6 +67,7 @@
     </section>
     
     <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="alert" id="alert" value="{{ data }}" />
     <input type="hidden" name="user" id="user" value="{{ user }}" />
     <input type="hidden" name="email" id="email" value="{{ email }}" />
 
@@ -75,5 +77,6 @@
     <script src="{{url_for('static',filename='js/form.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='js/confirmarpass.js')}}"></script>
   </body>
 </html>

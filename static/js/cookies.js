@@ -1,4 +1,5 @@
 //Declaración de variables
+let id = document.getElementById("iduser");
 let usuario = document.getElementById("user");
 let correo = document.getElementById("email");
 let imagelogin = document.getElementById("logon");
@@ -8,8 +9,10 @@ const mail = getCookie("correo");
 
 //Verificar si existe la cookie
 if (usuario.value != "" || correo.value != "") {
+  document.cookie = "iduser=" + id.value;
   document.cookie = "username=" + usuario.value;
   document.cookie = "correo=" + correo.value;
+  imagelogin.style.display = "block";
 }
 
 //Si la cookie existe, entonces mostramos el icono del login

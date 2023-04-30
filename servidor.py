@@ -1,5 +1,5 @@
 from flask import Flask,render_template, request, redirect, url_for
-from conexionBBDD import registrarPelicula, registrarUsuario, validarUsuario
+from conexionBBDD import registrarPelicula, registrarUsuario, validarUsuario, validarPassword
 
 app = Flask(__name__)
 
@@ -11,7 +11,11 @@ def paginaInicio():
 #Ruta para abrir pagina de Login
 @app.route("/login")
 def paginaLogin():
-    return render_template("login.html")
+    if request.args.get("data"):
+        alert = request.args.get("data")
+        return render_template("login.html",data=alert)
+    else :
+        return render_template("login.html")
 
 #Ruta para registrar datos de usuario
 @app.route("/registrarUsuario", methods=["GET","POST"])
@@ -31,12 +35,32 @@ def validarUser():
     try:
         if request.method == 'POST':
             datos = validarUsuario(request)
-            usuario = list(datos[0])
-            return redirect(url_for("paginaLista",username=usuario[1],email=usuario[2]))
+            if datos == "404" :
+                alert = "¡Usuario o contraseña incorrecto!"
+                return redirect(url_for("paginaLogin",data=alert))
+            else :
+                usuario = list(datos[0])
+                return redirect(url_for("paginaLista",iduser=usuario[0],username=usuario[1],email=usuario[2]))
         else:
             return render_template("login.html")
     except:
         return render_template("login.html")
+
+#Ruta para validar Usuario
+@app.route("/cambiarPassword", methods=["GET","POST"])
+def validarPass():
+    try:
+        if request.method == 'POST':
+            datos = validarPassword(request)
+            if datos == "404" :
+                alert = "¡Las contraseñas no son iguales!"
+                return redirect(url_for("resetpass",data=alert))
+            else :
+                return redirect(url_for("paginaLista",data=datos))
+        else:
+            return render_template("resetpass.html")
+    except:
+        return render_template("resetpass.html")
     
 #Ruta para abrir pagina formulario
 @app.route("/formulario", methods=['GET'])
@@ -63,10 +87,11 @@ def paginaLista():
     if request.args.get("data"):
         alert = request.args.get("data")
         return render_template("list.html",data=alert)
-    elif request.args.get("username"):
+    elif request.args.get("iduser"):
+        idusuario = request.args.get("iduser")
         usuario = request.args.get("username")
         correo = request.args.get("email")
-        return render_template("list.html",user=usuario,email=correo)
+        return render_template("list.html",id=idusuario,user=usuario,email=correo)
     else:
         return render_template("list.html")
 
@@ -97,8 +122,12 @@ def infoUser():
 #Ruta para abrir pagina Inicial
 @app.route("/cambiarContrasenya")
 def resetpass():
-    return render_template("resetpass.html")
-
+        if request.args.get("data"):
+            alert = request.args.get("data")
+            return render_template("resetpass.html",data=alert)
+        else: 
+            return render_template("resetpass.html")
+        
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.run(host='localhost', port=3000, debug=True)
 

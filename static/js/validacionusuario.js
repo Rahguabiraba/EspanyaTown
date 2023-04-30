@@ -12,3 +12,10 @@ function validacionUsuario() {
     alert("Todos los datos son obligatorios");
   } 
 }
+
+//Cogemos el dato de la variable y imprimimos en el alert
+let mensaje = document.getElementById("alert");
+
+if (mensaje.value != "") {
+  alert(mensaje.value);
+}
