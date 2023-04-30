@@ -30,8 +30,9 @@ def registrarUser():
 def validarUser():
     try:
         if request.method == 'POST':
-            datosUsuario = validarUsuario(request)
-            return redirect(url_for("paginaLista",user=datosUsuario))
+            datos = validarUsuario(request)
+            usuario = list(datos[0])
+            return redirect(url_for("paginaLista",username=usuario[1],email=usuario[2]))
         else:
             return render_template("login.html")
     except:
@@ -62,11 +63,10 @@ def paginaLista():
     if request.args.get("data"):
         alert = request.args.get("data")
         return render_template("list.html",data=alert)
-    elif request.args.get("user"):
-        usuario = request.args.get("user")
-        lista = list(usuario)
-        print(lista)
-        return render_template("list.html",user=usuario)
+    elif request.args.get("username"):
+        usuario = request.args.get("username")
+        correo = request.args.get("email")
+        return render_template("list.html",user=usuario,email=correo)
     else:
         return render_template("list.html")
 

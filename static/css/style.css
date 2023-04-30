@@ -877,6 +877,10 @@ main p {
   cursor: pointer;
 }
 
+#logon {
+  display: none;
+}
+
 /****** ACERCA DE ********/
 .logo-about {
   position: relative;

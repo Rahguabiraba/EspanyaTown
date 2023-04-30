@@ -17,6 +17,19 @@
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
             <li><div onclick="about()">Acerca de</a></li>
+              <li id="logon">
+                <div id="dropdown">
+                  <img
+                    id="dropimage"
+                    src="{{url_for('static',filename='src/login.jpg')}}"
+                    alt="icon_login"
+                  />
+                  <div id="dropdown-content">
+                    <a onclick="userinfo()">Datos Usuario</a>
+                    <a onclick="resetpass()">Cambiar Contraseña</a>
+                  </div>
+                </div>
+              </li>
           </ul>
         </nav>
       </header>
@@ -51,6 +64,14 @@
         <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
       </div>
     </div>
+    
+    <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="user" id="user" value="{{ user }}" />
+    <input type="hidden" name="email" id="email" value="{{ email }}" />
+
+    <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
   </body>
 </html>

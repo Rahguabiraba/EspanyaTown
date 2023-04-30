@@ -22,6 +22,19 @@
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
             <li><div onclick="about()">Acerca de</div></li>
+            <li id="logon">
+              <div id="dropdown">
+                <img
+                  id="dropimage"
+                  src="{{url_for('static',filename='src/login.jpg')}}"
+                  alt="icon_login"
+                />
+                <div id="dropdown-content">
+                  <a onclick="userinfo()">Datos Usuario</a>
+                  <a onclick="resetpass()">Cambiar Contraseña</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
       </header>
@@ -35,6 +48,7 @@
               >
               <input
                 type="text"
+                id="usuario"
                 name="usuario"
                 placeholder="Nombre de Usuario"
                 required
@@ -42,6 +56,7 @@
               />
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Correo Electrónico"
                 required
@@ -49,12 +64,13 @@
               />
               <input
                 type="password"
+                id="contrasenya"
                 name="contrasenya"
                 placeholder="Contraseña"
                 required
                 class="input-login"
               />
-              <input type="submit" value="Entrar" class="button-login">
+              <input type="submit" id="altausuario" value="Entrar" class="button-login">
             </form>
           </div>
 
@@ -65,6 +81,7 @@
               >
               <input
                 type="email"
+                id="emailLogin"
                 name="emailLogin"
                 placeholder="Correo Electrónico"
                 required
@@ -72,17 +89,28 @@
               />
               <input
                 type="password"
+                id="passwordLogin"
                 name="passwordLogin"
                 placeholder="Contraseña"
                 required
                 class="input-login"
               />
-              <input type="submit" value="Entrar" class="button-login">
+              <input type="submit" value="Entrar" class="button-login" onclick="validacionUsuario()">
             </form>
           </div>
         </div>
       </div>
     </section>
+    
+    <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="user" id="user" value="{{ user }}" />
+    <input type="hidden" name="email" id="email" value="{{ email }}" />
+
+    <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
+    <script src="{{url_for('static',filename='js/altausuario.js')}}"></script>
+    <script src="{{url_for('static',filename='js/validacionusuario.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
   </body>
 </html>

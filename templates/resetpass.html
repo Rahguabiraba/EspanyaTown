@@ -63,8 +63,16 @@
         </form>
       </main>
     </section>
+    
+    <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="user" id="user" value="{{ user }}" />
+    <input type="hidden" name="email" id="email" value="{{ email }}" />
+
+    <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/form.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
   </body>
 </html>

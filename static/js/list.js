@@ -49,7 +49,3 @@ let mensaje = document.getElementById("alert");
 if (mensaje.value != "") {
   alert(mensaje.value);
 }
-
-let usuario = document.getElementById("user")
-document.cookie = "username=" + usuario[1];
-document.cookie = "correo=" + usuario[2];

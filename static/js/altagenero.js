@@ -9,7 +9,6 @@ function altaGenero() {
   let correo = document.getElementById("mail");
   let edad = document.getElementById("edad");
   let genero = document.getElementById("generos_list");
-  let descripcion = document.getElementById("descripcion");
 
   //validar los datos (opcionalmente)
   if (

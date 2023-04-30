@@ -43,7 +43,7 @@
       </header>
       <main>
         <div class="info">
-          <h2>Nombre</h2>
+          <h2>Nombre Usuario</h2>
           <p>Ramon</p>
         </div>
         <div class="info">
@@ -51,11 +51,19 @@
           <p>ramonguabiraba@hotmail.com</p>
         </div>
         <form action="">
-          <input id="button-pass" type="button" value="VER LISTADO">
+          <input id="button-pass" type="button" value="VER LISTADO" />
         </form>
       </main>
     </section>
+
+    <!--Inputs para los datos que llegan desde el flask-->
+    <input type="hidden" name="user" id="user" value="{{ user }}" />
+    <input type="hidden" name="email" id="email" value="{{ email }}" />
+
+    <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/login.js')}}"></script>
+    <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
   </body>
 </html>
