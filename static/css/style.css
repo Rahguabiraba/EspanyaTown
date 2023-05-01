@@ -11,7 +11,7 @@ html {
 }
 
 /*MEDIA QUERIES - COMPUTER*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 634px) {
   /****** SECTION DEL INDEX ******/
   section {
     position: relative;
@@ -56,7 +56,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 20px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +85,7 @@ html {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.2vw;
+    font-size: 1.2em;
     border-radius: 40px;
     border-color: transparent;
     padding: 10px 10px 10px 10px;
@@ -104,8 +104,8 @@ html {
   }
 
   .logo {
-    width: 5vw;
-    height: 5vw;
+    width: 8vw;
+    height: 8vw;
     transition: all 0.3s ease;
   }
 
@@ -113,6 +113,14 @@ html {
     width: 8vw;
     height: 8vw;
     cursor: pointer;
+  }
+
+  #caja-menu {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
   }
 
   /****** CONTAINER DE LA SECTION ******/
@@ -214,13 +222,13 @@ html {
 
   .boxImg {
     position: relative;
-    z-index: 99;
-    left: 60px;
-    bottom: -80px;
+    z-index: 50;
+    left: 70px;
+    bottom: -125px;
   }
 
   .boxImg img {
-    width: 30vw;
+    width: 25vw;
   }
 
   /****** FORMULARIO ******/
@@ -782,7 +790,7 @@ html {
     border-color: #000 #000 #fff;
     background-color: transparent;
     color: #ffffff;
-    font-size: 28px;
+    font-size: 1.3em;
     line-height: 28px;
   }
 
@@ -825,7 +833,7 @@ html {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding: 10px 90px;
+    padding: 10px 65px;
     background: #fff;
     border-style: solid;
     border-color: transparent;
@@ -856,7 +864,7 @@ html {
   }
 
   .login {
-    height: 780px;
+    height: 401px;
     background: #e51e2a;
     border-radius: 50%;
     transform: translateY(-90px);
@@ -1037,7 +1045,7 @@ html {
 }
 
 /*MEDIA QUERIES - TABLETS*/
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 634px) {
   /****** SECTION DEL INDEX ******/
   section {
     position: relative;
@@ -1056,12 +1064,13 @@ html {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 20px;
     background: #121212;
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    flex-direction: column;
   }
 
   /****** BACKGROUND CIRCULO ROJO ******/
@@ -1082,7 +1091,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1096,8 +1105,8 @@ html {
   header .navegation ul {
     position: relative;
     display: flex;
+    width: 55vw;
     flex-direction: row;
-    width: 40vw;
     align-items: center;
     justify-content: space-around;
   }
@@ -1111,7 +1120,7 @@ html {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    font-size: 2.5vw;
+    font-size: 1em;
     border-radius: 40px;
     border-color: transparent;
     padding: 10px 0px 10px 10px;
@@ -1141,10 +1150,19 @@ html {
     cursor: pointer;
   }
 
+  #caja-menu {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
   /****** CONTAINER DE LA SECTION ******/
   .container {
     position: relative;
     width: 100%;
+    bottom: -100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1205,6 +1223,7 @@ html {
   /****** ICONOS DE BOTONES DE TRADUCCION ******/
   .icons {
     position: absolute;
+    z-index: 40;
     bottom: 25px;
     display: flex;
     align-items: center;
@@ -1241,8 +1260,7 @@ html {
   .boxImg {
     position: relative;
     z-index: 99;
-    left: 60px;
-    bottom: -130px;
+    left: 130px;
   }
 
   .boxImg img {
@@ -2063,9 +2081,9 @@ html {
 }
 
 /*MEDIA QUERIES - MOBILES*/
-@media only screen and (max-width: 600px) {
-   /****** SECTION DEL INDEX ******/
-   section {
+@media only screen and (max-width: 400px) {
+  /****** SECTION DEL INDEX ******/
+  section {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -2082,7 +2100,7 @@ html {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 20px;
     background: #121212;
     display: flex;
     align-items: center;
@@ -2095,7 +2113,6 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
     height: 100%;
     width: 100%;
     background-color: #e51e2a;
@@ -2108,7 +2125,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2119,17 +2136,14 @@ html {
   }
 
   /****** MENU ******/
-  header .navegation ul {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 40vw;
-    align-items: center;
-    justify-content: space-around;
+
+  #menu-outside {
+    display: none;
   }
 
-  header .navegation li {
-    list-style: none;
+
+  header .navegation ul {
+    display: none;
   }
 
   header .navegation li div {
@@ -2156,8 +2170,8 @@ html {
   }
 
   .logo {
-    width: 8vw;
-    height: 8vw;
+    width: 18vw;
+    height: 18vw;
     transition: all 0.3s ease;
   }
 
@@ -2167,9 +2181,89 @@ html {
     cursor: pointer;
   }
 
+  #caja-menu {
+    display: relative;
+  }
+
+  .container-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 52;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 5px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .overlay {
+    display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 51;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
   /****** CONTAINER DE LA SECTION ******/
   .container {
     position: relative;
+    bottom: 10px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -2187,7 +2281,7 @@ html {
 
   .container .text h2 {
     color: #fff;
-    font-size: 3.5vw;
+    font-size: 6.2vw;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
@@ -2206,7 +2300,7 @@ html {
   /****** BOTÓN PARA INICIAR LA PETICIÓN DEL FORMULARIO ******/
   .container .text div {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 8px;
     padding: 10px 15px;
     background: #e51e2a;
     border-style: solid;
@@ -2246,8 +2340,8 @@ html {
 
   .icons li .icon {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #222;
     margin-right: 45px;
@@ -2266,13 +2360,16 @@ html {
 
   .boxImg {
     position: relative;
-    z-index: 99;
-    left: 60px;
-    bottom: -130px;
+    z-index: 50;
+    bottom: -140px;
   }
 
   .boxImg img {
     width: 30vw;
+  }
+
+  .main-index{
+    width: 100%;
   }
 
   /****** FORMULARIO ******/

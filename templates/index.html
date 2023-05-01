@@ -13,7 +13,7 @@
       <header>
         <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo" onclick="inicio()">
         <nav class="navegation">
-                        <!--Menu Hamburguesa-->
+          <!--Menu Hamburguesa-->
           <span id="caja-menu">
             <div class="container-menu" id="menu" onclick="abrirMenu()">
               <div id="bar1" class="bar1"></div>
@@ -21,98 +21,83 @@
               <div id="bar3" class="bar3"></div>
             </div>
           </span>
-              <!-- Overlay cuando el menu esta activado-->
-    <div id="myNav" class="overlay">
-      <div class="overlay-content">
-        <div id="tapa-caja"></div>
-        <div id="caja-pastilla">
-          <div class="pastilla" onclick="inicio()">
-            <div id="tapa-pastilla-start">
-              <h3>INI</h3>
-            </div>
-            <div id="tapa-pastilla-end">
-              <h3>CI</h3>
-            </div>
-          </div>
-          <div class="pastilla" onclick="registrar()">
-            <div id="tapa-pastilla-start">
-              <h3>REGIS</h3>
-            </div>
-            <div id="tapa-pastilla-end">
-              <h3>TRAR</h3>
-            </div>
-          </div>
-          <div class="pastilla" onclick="listarPacientes()">
-            <div id="tapa-pastilla-start">
-              <h3>LLIS</h3>
-            </div>
-            <div id="tapa-pastilla-end">
-              <h3>TAR</h3>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul>
+                <li><div onclick="inicio()">Inicio</div></li>
+                <li><div onclick="login()">Login</div></li>
+                <li><div onclick="about()">Acerca de</a></li>
+                <li id="logon_over">
+                  <div id="dropdown_over">
+                    <img
+                      id="dropimage_over"
+                      src="{{url_for('static',filename='src/login.jpg')}}"
+                      alt="icon_login"
+                    />
+                    <div id="dropdown-content_over">
+                      <a onclick="userinfo()">Datos Usuario</a>
+                      <a onclick="resetpass()">Cambiar Contraseña</a>
+                      <a onclick="deleteuser()">Salir</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="pastilla">
-            <div id="tapa-pastilla-start">
-              <h3>VALOR</h3>
-            </div>
-            <div id="tapa-pastilla-end">
-              <h3>ACIÓ</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-          <ul>
+          <ul id="menu-outside">
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
             <li><div onclick="about()">Acerca de</a></li>
-              <li id="logon">
-                <div id="dropdown">
-                  <img
-                    id="dropimage"
-                    src="{{url_for('static',filename='src/login.jpg')}}"
-                    alt="icon_login"
-                  />
-                  <div id="dropdown-content">
-                    <a onclick="userinfo()">Datos Usuario</a>
-                    <a onclick="resetpass()">Cambiar Contraseña</a>
-                    <a onclick="deleteuser()">Salir</a>
-                  </div>
+            <li id="logon">
+              <div id="dropdown">
+                <img
+                  id="dropimage"
+                  src="{{url_for('static',filename='src/login.jpg')}}"
+                  alt="icon_login"
+                />
+                <div id="dropdown-content">
+                  <a onclick="userinfo()">Datos Usuario</a>
+                  <a onclick="resetpass()">Cambiar Contraseña</a>
+                  <a onclick="deleteuser()">Salir</a>
                 </div>
-              </li>
+              </div>
+            </li>
           </ul>
         </nav>
       </header>
-      <div class="container">
-        <div class="text">
-          <h2>
-            ¡Justo lo que <br />
-            <span>ME GUSTA!</span>
-          </h2>
-          <p>
-            ¿Quieres saber cómo encontrar tu película perfecta? ¿Qué
-            te parece si te paso un listado? ¡Complete el formulario y reciba
-            una muestra gratis!<p>
-              <div onclick="form()">COMENZAR</div>
-          </p>
+        <div class="container">
+          <div class="text">
+            <h2>
+              ¡Justo lo que <br />
+              <span>ME GUSTA!</span>
+            </h2>
+            <p>
+              ¿Quieres saber cómo encontrar tu película perfecta? ¿Qué
+              te parece si te paso un listado? ¡Complete el formulario y reciba
+              una muestra gratis!</p>
+              <p>
+                <div onclick="form()">COMENZAR</div>
+              </p>
+          </div>
         </div>
-      </div>
-        <ul class="icons">
-          <li>
-            <form action="/traduccion-es" method="POST" id="form-es">
-              <input type="button" class="icon" name="es" value="ES">
-            </form>
-          </li>
-          <li>
-            <form action="/traduccion-zh-cn" method="POST" id="form-ch">
-              <input type="button" class="icon" name="ch" value="CH">
-            </form>
-            
-          </li>
-        </ul>
-      <div class="boxImg">
-        <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
-      </div>
+          <ul class="icons">
+            <li>
+              <form action="/traduccion-es" method="POST" id="form-es">
+                <input type="button" class="icon" name="es" value="ES">
+              </form>
+            </li>
+            <li>
+              <form action="/traduccion-zh-cn" method="POST" id="form-ch">
+                <input type="button" class="icon" name="ch" value="CH">
+              </form>
+            </li>
+          </ul>
+          <div class="boxImg">
+            <img src="{{url_for('static',filename='src/palomitas.png')}}" alt="Palomitas" class="img1">
+          </div>
     </div>
+    
     
     <!--Inputs para los datos que llegan desde el flask-->
     <input type="hidden" name="user" id="user" value="{{ user }}" />

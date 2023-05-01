@@ -17,10 +17,42 @@
           onclick="inicio()"
         />
         <nav class="navegation">
-          <ul>
+          <!--Menu Hamburguesa-->
+          <span id="caja-menu">
+            <div class="container-menu" id="menu" onclick="abrirMenu()">
+              <div id="bar1" class="bar1"></div>
+              <div id="bar2" class="bar2"></div>
+              <div id="bar3" class="bar3"></div>
+            </div>
+          </span>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul>
+                <li><div onclick="inicio()">Inicio</div></li>
+                <li><div onclick="login()">Login</div></li>
+                <li><div onclick="about()">Acerca de</a></li>
+                <li id="logon_over">
+                  <div id="dropdown_over">
+                    <img
+                      id="dropimage_over"
+                      src="{{url_for('static',filename='src/login.jpg')}}"
+                      alt="icon_login"
+                    />
+                    <div id="dropdown-content_over">
+                      <a onclick="userinfo()">Datos Usuario</a>
+                      <a onclick="resetpass()">Cambiar Contraseña</a>
+                      <a onclick="deleteuser()">Salir</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul id="menu-outside">
             <li><div onclick="inicio()">Inicio</div></li>
             <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</div></li>
+            <li><div onclick="about()">Acerca de</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
