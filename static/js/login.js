@@ -10,6 +10,6 @@ function userinfo() {
     document.cookie = "iduser="
     document.cookie = "username="
     document.cookie = "correo="
-    location.replace("/lista");
+    location.replace("/");
   }
   
