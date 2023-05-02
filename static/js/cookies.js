@@ -3,6 +3,9 @@ let id = document.getElementById("iduser");
 let usuario = document.getElementById("user");
 let correo = document.getElementById("email");
 let imagelogin = document.getElementById("logon");
+let reset = document.getElementById("reset");
+let info = document.getElementById("info");
+let deleteUser = document.getElementById("delete");
 const user = getCookie("username");
 const mail = getCookie("correo");
 
@@ -13,6 +16,9 @@ if (usuario.value != "" || correo.value != "") {
   document.cookie = "username=" + usuario.value;
   document.cookie = "correo=" + correo.value;
   imagelogin.style.display = "block";
+  reset.style.display = "block";
+  info.style.display = "block";
+  deleteUser.style.display = "block";
 }
 
 //Si la cookie existe, entonces mostramos el icono del login

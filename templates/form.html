@@ -13,10 +13,31 @@
       <header>
         <img src="{{url_for('static',filename='src/logo_vermelho.png')}}" alt="Logo" class="logo" onclick="inicio()"/>
         <nav class="navegation">
-          <ul>
-            <li><div onclick="inicio()">Inicio</div></li>
-            <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</div></li>
+          <!--Menu Hamburguesa-->
+          <span id="caja-menu">
+            <div class="container-menu" id="menu" onclick="abrirMenu()">
+              <div id="bar1" class="bar1"></div>
+              <div id="bar2" class="bar2"></div>
+              <div id="bar3" class="bar3"></div>
+            </div>
+          </span>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul id="menu-inside">
+                <li><div id="menu_inside_inicio" onclick="inicio()">开始</div></li>
+                <li><div id="menu_inside_login" onclick="login()">登录</div></li>
+                <li><div id="menu_inside_about" onclick="about()">关于</a></li>
+                <li id="info"><div id="menu_inside_datos" onclick="userinfo()">用户数据</a></li>
+                <li id="reset"><div id="menu_inside_pass" onclick="resetpass()">更改密码</a></li>
+                <li id="delete"><div id="menu_inside_delete" onclick="deleteuser()">出去</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul id="menu-outside">
+            <li><div id="menu_outside_inicio" onclick="inicio()">开始</div></li>
+            <li><div id="menu_outside_login" onclick="login()">登录</div></li>
+            <li><div id="menu_outside_about" onclick="about()">关于</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
@@ -25,9 +46,9 @@
                   alt="icon_login"
                 />
                 <div id="dropdown-content">
-                  <a onclick="userinfo()">Datos Usuario</a>
-                  <a onclick="resetpass()">Cambiar Contraseña</a>
-                  <a onclick="deleteuser()">Salir</a>
+                  <a id="menu_outside_datos" onclick="userinfo()">用户数据</a>
+                  <a id="menu_outside_pass" onclick="resetpass()">更改密码</a>
+                  <a id="menu_outside_delete" onclick="deleteuser()">出去</a>
                 </div>
               </div>
             </li>
@@ -36,54 +57,54 @@
       </header>
       <form id="form" method="POST" action="/enviarDatosPeli">
         <div id="part1" class="part-form-top">
-          <label for="name">¿Tu nombre?</label> <br />
+          <label id="form_Label_name" for="name">你的名字</label> <br />
           <input type="text" name="nombre" id="name" class="name" required />
           <div class="button">
-            <a href="#part2">SIGUIENTE</a>
+            <a class="button-next" href="#part2">下面</a>
           </div>
         </div>
         <div id="part2" class="part-form reveal">
-          <label for="mail">¿Tu correo electrónico?</label> <br />
-          <input type="email" name="correo" id="mail" required />
+          <label id="form_Label_motivo" for="motivo">你为什么喜欢看电影？</label> <br />
+          <input type="text" name="motivo" id="motivo" required />
           <div class="button">
-            <a href="#part1">VOLVER</a>
-            <a href="#part3">SIGUIENTE</a>
+            <a class="button-previous" href="#part1">后面</a>
+            <a class="button-next" href="#part3">下面</a>
           </div>
         </div>
         <div id="part3" class="part-form reveal">
-          <label for="edad">¿Tu edad?</label> <br />
+          <label id="form_label_edad" for="edad">你多大年纪了?</label> <br />
           <input type="date" name="edad" id="edad" required />
           <div class="button">
-            <a href="#part2">VOLVER</a>
-            <a href="#part4">SIGUIENTE</a>
+            <a class="button-previous" href="#part2">后面</a>
+            <a class="button-next" href="#part4">下面</a>
           </div>
         </div>
         <div id="part4" class="part-form reveal">
-          <label for="generos">Seleccione el genero que más te gusta</label>
+          <label id="form_label_generos" for="generos">选择你最喜欢的电影类型</label>
           <br />
           <div>
             <select id="generos_list" name="genero" form="form">
-              <option value="accion">Acción</option>
-              <option value="aventura">Aventura</option>
-              <option value="comedia">Comedia</option>
-              <option value="crime">Crime</option>
-              <option value="drama">Drama</option>
-              <option value="familia">Familia</option>
-              <option value="fantasia">Fantasia</option>
-              <option value="historia">Historia</option>
-              <option value="horror">Horror</option>
-              <option value="musica">Musica</option>
-              <option value="misterio">Misterio</option>
-              <option value="romance">Romance</option>
+              <option value="accion">行动</option>
+              <option value="aventura">冒险</option>
+              <option value="comedia">喜剧</option>
+              <option value="crime">犯罪</option>
+              <option value="drama">戏剧</option>
+              <option value="familia">家庭</option>
+              <option value="fantasia">想要</option>
+              <option value="historia">历史</option>
+              <option value="horror">恐怖</option>
+              <option value="musica">音乐</option>
+              <option value="misterio">神秘</option>
+              <option value="romance">浪漫</option>
             </select>
           </div>
           <div class="button">
-            <a href="#part3">VOLVER</a>
-            <a href="#part5">SIGUIENTE</a>
+            <a class="button-previous" href="#part3">后面</a>
+            <a class="button-next" href="#part5">下面</a>
           </div>
         </div>
         <div id="part5" class="part-form reveal">
-          <label for="comentario"> ¿Quieres añadir algún comentario?</label>
+          <label id="form_label_comentario" for="comentario">你想添加评论吗？</label>
           <br />
           <textarea
             name="comentario"
@@ -92,9 +113,9 @@
             rows="10"
           ></textarea>
           <div class="button">
-            <a href="#part4">VOLVER</a>
+            <a class="button-previous" href="#part4">后面</a>
             <div class="button-submit">
-              <input type="submit" id="altagenero" name="enviar" value="Enviar" />
+              <input type="submit" id="altagenero" name="enviar" value="发送" />
             </div>
           </div>
         </div>
@@ -104,6 +125,9 @@
     <!--Inputs para los datos que llegan desde el flask-->
     <input type="hidden" name="user" id="user" value="{{ user }}" />
     <input type="hidden" name="email" id="email" value="{{ email }}" />
+    <input type="hidden" name="iduser" id="iduser" value="{{ id }}" />
+    <input type="hidden" name="user" id="user" value="{{ user }}" />
+    <input type="hidden" name="email" id="email" value="{{ email }}" />
 
     <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
@@ -111,5 +135,6 @@
     <script src="{{url_for('static',filename='js/altagenero.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='traduccion/formtraduccion.js')}}"></script>
   </body>
 </html>

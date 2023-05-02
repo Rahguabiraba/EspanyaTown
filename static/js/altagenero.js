@@ -6,7 +6,7 @@ function altaGenero() {
 
   //recuperar los datos del forumario
   let nombre = document.getElementById("name");
-  let correo = document.getElementById("mail");
+  let correo = document.getElementById("motivo");
   let edad = document.getElementById("edad");
   let genero = document.getElementById("generos_list");
 

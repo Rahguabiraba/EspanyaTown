@@ -21,10 +21,31 @@
           onclick="inicio()"
         />
         <nav class="navegation">
-          <ul>
-            <li><div onclick="inicio()">Inicio</div></li>
-            <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</div></li>
+          <!--Menu Hamburguesa-->
+          <span id="caja-menu">
+            <div class="container-menu" id="menu" onclick="abrirMenu()">
+              <div id="bar1" class="bar1"></div>
+              <div id="bar2" class="bar2"></div>
+              <div id="bar3" class="bar3"></div>
+            </div>
+          </span>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul id="menu-inside">
+                <li><div id="menu_inside_inicio" onclick="inicio()">开始</div></li>
+                <li><div id="menu_inside_login" onclick="login()">登录</div></li>
+                <li><div id="menu_inside_about" onclick="about()">关于</a></li>
+                <li id="info"><div id="menu_inside_datos" onclick="userinfo()">用户数据</a></li>
+                <li id="reset"><div id="menu_inside_pass" onclick="resetpass()">更改密码</a></li>
+                <li id="delete"><div id="menu_inside_delete" onclick="deleteuser()">出去</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul id="menu-outside">
+            <li><div id="menu_outside_inicio" onclick="inicio()">开始</div></li>
+            <li><div id="menu_outside_login" onclick="login()">登录</div></li>
+            <li><div id="menu_outside_about" onclick="about()">关于</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
@@ -33,9 +54,9 @@
                   alt="icon_login"
                 />
                 <div id="dropdown-content">
-                  <a onclick="userinfo()">Datos Usuario</a>
-                  <a onclick="resetpass()">Cambiar Contraseña</a>
-                  <a onclick="deleteuser()">Salir</a>
+                  <a id="menu_outside_datos" onclick="userinfo()">用户数据</a>
+                  <a id="menu_outside_pass" onclick="resetpass()">更改密码</a>
+                  <a id="menu_outside_delete" onclick="deleteuser()">出去</a>
                 </div>
               </div>
             </li>
@@ -45,20 +66,20 @@
       <main>
         <form id="form" method="POST" action="/cambiarPassword">
           <div id="part1" class="part-form-top">
-            <label for="nueva_contrasenya">Tu nueva contraseña</label> <br />
+            <label id="reset_label_pass" for="nueva_contrasenya">你的新密码</label> <br />
             <input type="text" name="nueva_contrasenya" id="nueva_contrasenya" class="name" required />
             <div class="button">
-              <a href="#part2">SIGUIENTE</a>
+              <a id="button_next" href="#part2">下面</a>
             </div>
           </div>
           <div id="part2" class="part-form reveal">
-            <label for="confirm_contrasenya">Confirme la contraseña</label> <br />
+            <label id="reset_label_repass" for="confirm_contrasenya">确认密码</label> <br />
             <input type="text" name="confirm_contrasenya" id="confirm_contrasenya" required />
             <div class="button">
-              <a href="#part1">VOLVER</a>
+              <a id="button_previous" href="#part1">后面</a>
               <div class="button-submit">
                 <input type="hidden" name="iduser" id="iduser" value="" />
-                <input type="submit" id="confirmarcontrasenya" name="confirmarcontrasenya" value="Enviar" />
+                <input type="submit" id="confirmarcontrasenya" name="confirmarcontrasenya" value="ENVIAR" />
               </div>
             </div>
           </div>
@@ -78,5 +99,6 @@
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
     <script src="{{url_for('static',filename='js/confirmarpass.js')}}"></script>
+    <script src="{{url_for('static',filename='traduccion/resettraduccion.js')}}"></script>
   </body>
 </html>

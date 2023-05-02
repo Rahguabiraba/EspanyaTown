@@ -72,7 +72,7 @@ fetch(API_URL)
                     <p class="${getColor(vote_average)}">
                       ${vote_average}
                     </p>
-                    <button class="__content--btn" id="myBtn" onclick="${getTrailer(VIDEO_URL)}">
+                    <button class="__content--btn" id="myBtn">
                       Trailer
                     </button>
                   </div>
@@ -85,10 +85,10 @@ fetch(API_URL)
               class="banner"
             />
             <div class="drop">
-              <i class="fas fa-chevron-circle-down boton-drop">
+              <i class="fas fa-chevron-circle-down boton-drop" onclick="buttonDrop()">
               </i>
             </div>
-            <div class="card__descripcion" id="drop-descripcion">
+            <div class="card__descripcion drop-descripcion">
             <div class="c-card__descripcion">
                 <div class="card__descripcion__texto">
                     <h1>${title}</h1>

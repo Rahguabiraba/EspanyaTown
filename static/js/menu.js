@@ -23,7 +23,7 @@ function abrirMenu() {
   // Utilizar variables
   icono = document.getElementById("menu");
   menu = document.getElementById("myNav");
-  let links = document.getElementById("menu-outside");
+  let links = document.getElementById("menu-inside");
   linea1 = document.getElementById("bar1");
   linea2 = document.getElementById("bar2");
   linea3 = document.getElementById("bar3");

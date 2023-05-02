@@ -21,10 +21,31 @@
           onclick="inicio()"
         />
         <nav class="navegation">
-          <ul>
-            <li><div onclick="inicio()">Inicio</div></li>
-            <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</div></li>
+          <!--Menu Hamburguesa-->
+          <span id="caja-menu">
+            <div class="container-menu" id="menu" onclick="abrirMenu()">
+              <div id="bar1" class="bar1"></div>
+              <div id="bar2" class="bar2"></div>
+              <div id="bar3" class="bar3"></div>
+            </div>
+          </span>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul id="menu-inside">
+                <li><div id="menu_inside_inicio" onclick="inicio()">开始</div></li>
+                <li><div id="menu_inside_login" onclick="login()">登录</div></li>
+                <li><div id="menu_inside_about" onclick="about()">关于</a></li>
+                <li id="info"><div id="menu_inside_datos" onclick="userinfo()">用户数据</a></li>
+                <li id="reset"><div id="menu_inside_pass" onclick="resetpass()">更改密码</a></li>
+                <li id="delete"><div id="menu_inside_delete" onclick="deleteuser()">出去</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul id="menu-outside">
+            <li><div id="menu_outside_inicio" onclick="inicio()">开始</div></li>
+            <li><div id="menu_outside_login" onclick="login()">登录</div></li>
+            <li><div id="menu_outside_about" onclick="about()">关于</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
@@ -33,9 +54,9 @@
                   alt="icon_login"
                 />
                 <div id="dropdown-content">
-                  <a onclick="userinfo()">Datos Usuario</a>
-                  <a onclick="resetpass()">Cambiar Contraseña</a>
-                  <a onclick="deleteuser()">Salir</a>
+                  <a id="menu_outside_datos" onclick="userinfo()">用户数据</a>
+                  <a id="menu_outside_pass" onclick="resetpass()">更改密码</a>
+                  <a id="menu_outside_delete" onclick="deleteuser()">出去</a>
                 </div>
               </div>
             </li>
@@ -49,20 +70,20 @@
           class="logo-about"
         />
         <div class="texto-about">
-          <h1>Nuestro proyecto</h1>
-          <p>
-            El objetivo del proyecto es muy simple: ayudar a los chinos a
-            enterarse un poco de la cultura occidental. Muchos chinos cuando que
-            llegan a nuestro país ya tienen un objetivo muy claro. Muchos vienen
-            a trabajo, estudios o simplemente vacaciones. Nosotros siempre
-            partimos del presupuesto que aprender chino es difícil. Pero no
-            paramos para pensar que para ellos entender nuestro idioma y cultura
-            también cuesta. Entonces la idea es presentar nuestra cultura para
-            los chinos de una forma diferente: utilizando películas de los más
-            variados tipos.
+          <h1 id="about_titulo">我们的项目</h1>
+          <p id="about_parrafo">
+            这个项目的目的很简单：帮助中国人
+            了解一点西方文化。很多中国人什么时候
+            来到我们的国家并有一个非常明确的目标。许多人来
+            工作、学习或只是度假。我们一直
+            我们从学习中文是困难的假设开始。但不是
+            我们不再认为他们能够理解我们的语言和文化
+            它也有成本。所以我们的想法是将我们的文化展示给
+            中国人以不同的方式：使用最多的电影
+            各种类型。
           </p>
-          <h5>Desenvolvido por Ramon Guabiraba</h5>
-          <h6>Versión 1.0</h6>
+          <h5 id="about_desen">由 Ramon Guabiraba 开发</h5>
+          <h6 id="about_version">版本 1.0</h6>
         </div>
       </div>
     </section>
@@ -75,5 +96,6 @@
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='traduccion/abouttraduccion.js')}}"></script>
   </body>
 </html>

@@ -40,7 +40,7 @@ def validarUser():
                 return redirect(url_for("paginaLogin",data=alert))
             else :
                 usuario = list(datos[0])
-                return redirect(url_for("paginaLista",iduser=usuario[0],username=usuario[1],email=usuario[2]))
+                return redirect(url_for("paginaFormulario",iduser=usuario[0],username=usuario[1],email=usuario[2]))
         else:
             return render_template("login.html")
     except:
@@ -65,7 +65,13 @@ def validarPass():
 #Ruta para abrir pagina formulario
 @app.route("/formulario", methods=['GET'])
 def paginaFormulario():
-    return render_template("form.html")
+    if request.args.get("iduser"):
+        idusuario = request.args.get("iduser")
+        usuario = request.args.get("username")
+        correo = request.args.get("email")
+        return render_template("form.html",id=idusuario,user=usuario,email=correo)
+    else:
+        return render_template("form.html")
 
 #Ruta para enviar Datos del Formulario a la base de datos
 @app.route("/enviarDatosPeli", methods=["GET","POST"])
@@ -84,15 +90,9 @@ def registrarPeli():
 #Ruta para abrir pagina de Listado de Peliculas
 @app.route("/lista", methods=["GET", "POST"])
 def paginaLista():
-    if request.args.get("data"):
-        alert = request.args.get("data")
+    if request.args.get("genero"):
         genero = request.args.get("genero")
-        return render_template("list.html",data=alert,genero=genero)
-    elif request.args.get("iduser"):
-        idusuario = request.args.get("iduser")
-        usuario = request.args.get("username")
-        correo = request.args.get("email")
-        return render_template("list.html",id=idusuario,user=usuario,email=correo)
+        return render_template("list.html",genero=genero)
     else:
         return render_template("list.html")
 
@@ -100,20 +100,6 @@ def paginaLista():
 @app.route("/acerca_de")
 def paginaAcercaDe():
     return render_template("about.html")
-
-#Ruta para traducir paginas
-@app.route("/traduccion",methods=["GET","POST"])
-def traducirPaginas():
-    try:
-        if request.method == 'POST':
-            #Enviamos los datos del formulario a nuestra base de datos
-            registrarPelicula(request)
-            alert = "¡Registro Finalizado!"
-            return redirect(url_for("paginaLista",data=alert))
-        else:
-            return render_template("form.html")
-    except:
-        return render_template("form.html")
 
 #Ruta para abrir pagina Informaciones de Usuario
 @app.route("/informacionUsuario")

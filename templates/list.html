@@ -27,10 +27,31 @@
           onclick="inicio()"
         />
         <nav class="navegation">
-          <ul>
-            <li><div onclick="inicio()">Inicio</div></li>
-            <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</div></li>
+          <!--Menu Hamburguesa-->
+          <span id="caja-menu">
+            <div class="container-menu" id="menu" onclick="abrirMenu()">
+              <div id="bar1" class="bar1"></div>
+              <div id="bar2" class="bar2"></div>
+              <div id="bar3" class="bar3"></div>
+            </div>
+          </span>
+          <!-- Overlay cuando el menu esta activado-->
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <ul id="menu-inside">
+                <li><div id="menu_inside_inicio" onclick="inicio()">开始</div></li>
+                <li><div id="menu_inside_login" onclick="login()">登录</div></li>
+                <li><div id="menu_inside_about" onclick="about()">关于</a></li>
+                <li id="info"><div id="menu_inside_datos" onclick="userinfo()">用户数据</a></li>
+                <li id="reset"><div id="menu_inside_pass" onclick="resetpass()">更改密码</a></li>
+                <li id="delete"><div id="menu_inside_delete" onclick="deleteuser()">出去</a></li>
+              </ul>
+            </div>
+          </div>
+          <ul id="menu-outside">
+            <li><div id="menu_outside_inicio" onclick="inicio()">开始</div></li>
+            <li><div id="menu_outside_login" onclick="login()">登录</div></li>
+            <li><div id="menu_outside_about" onclick="about()">关于</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
@@ -39,26 +60,24 @@
                   alt="icon_login"
                 />
                 <div id="dropdown-content">
-                  <a onclick="userinfo()">Datos Usuario</a>
-                  <a onclick="resetpass()">Cambiar Contraseña</a>
-                  <a onclick="deleteuser()">Salir</a>
+                  <a id="menu_outside_datos" onclick="userinfo()">用户数据</a>
+                  <a id="menu_outside_pass" onclick="resetpass()">更改密码</a>
+                  <a id="menu_outside_delete" onclick="deleteuser()">出去</a>
                 </div>
               </div>
             </li>
           </ul>
         </nav>
       </header>
-      <div class="titulo"><h1>Lista de Peliculas</h1></div>
+      <div class="titulo"><h1 id="titulo" >电影列表</h1></div>
       <div class="contenedor" id="contenedor">
       </div>
     </section>
 
     <!--Inputs para los datos que llegan desde el flask-->
-    <input type="hidden" name="alert" id="alert" value="{{ data }}" />
-    <input type="hidden" name="iduser" id="iduser" value="{{ id }}" />
+    <input type="hidden" name="genero" id="genero" value="{{ genero }}" />
     <input type="hidden" name="user" id="user" value="{{ user }}" />
     <input type="hidden" name="email" id="email" value="{{ email }}" />
-    <input type="hidden" name="genero" id="genero" value="{{ genero }}" />
 
     <!--Script de la pagina-->
     <script src="{{url_for('static',filename='js/menu.js')}}"></script>
@@ -66,5 +85,6 @@
     <script src="{{url_for('static',filename='js/list.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='traduccion/listtraduccion.js')}}"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@ def registrarPelicula(request):
 
     # Pasar las informaciones del formulario a las variables
     nombre = respuesta['nombre']
-    correo = respuesta['correo']
+    motivo = respuesta['motivo']
     edad = respuesta['edad']
     genero = respuesta['genero']
     comentario = respuesta['comentario']
@@ -15,7 +15,7 @@ def registrarPelicula(request):
     try:
         conector = sql.connect("database/cinema.db")
         cursor = conector.cursor()
-        cursor.execute(f"INSERT INTO formulario (nombre,correo,edad,genero,comentarios) VALUES ('{nombre}','{correo}','{edad}','{genero}','{comentario}')")
+        cursor.execute(f"INSERT INTO formulario (nombre,motivo,edad,genero,comentarios) VALUES ('{nombre}','{motivo}','{edad}','{genero}','{comentario}')")
         conector.commit()
         conector.close()
         return genero

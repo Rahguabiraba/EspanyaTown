@@ -28,31 +28,20 @@
           <!-- Overlay cuando el menu esta activado-->
           <div id="myNav" class="overlay">
             <div class="overlay-content">
-              <ul>
-                <li><div onclick="inicio()">Inicio</div></li>
-                <li><div onclick="login()">Login</div></li>
-                <li><div onclick="about()">Acerca de</a></li>
-                <li id="logon_over">
-                  <div id="dropdown_over">
-                    <img
-                      id="dropimage_over"
-                      src="{{url_for('static',filename='src/login.jpg')}}"
-                      alt="icon_login"
-                    />
-                    <div id="dropdown-content_over">
-                      <a onclick="userinfo()">Datos Usuario</a>
-                      <a onclick="resetpass()">Cambiar Contraseña</a>
-                      <a onclick="deleteuser()">Salir</a>
-                    </div>
-                  </div>
-                </li>
+              <ul id="menu-inside">
+                <li><div id="menu_inside_inicio" onclick="inicio()">开始</div></li>
+                <li><div id="menu_inside_login" onclick="login()">登录</div></li>
+                <li><div id="menu_inside_about" onclick="about()">关于</a></li>
+                <li id="info"><div id="menu_inside_datos" onclick="userinfo()">用户数据</a></li>
+                <li id="reset"><div id="menu_inside_pass" onclick="resetpass()">更改密码</a></li>
+                <li id="delete"><div id="menu_inside_delete" onclick="deleteuser()">出去</a></li>
               </ul>
             </div>
           </div>
           <ul id="menu-outside">
-            <li><div onclick="inicio()">Inicio</div></li>
-            <li><div onclick="login()">Login</div></li>
-            <li><div onclick="about()">Acerca de</a></li>
+            <li><div id="menu_outside_inicio" onclick="inicio()">开始</div></li>
+            <li><div id="menu_outside_login" onclick="login()">登录</div></li>
+            <li><div id="menu_outside_about" onclick="about()">关于</a></li>
             <li id="logon">
               <div id="dropdown">
                 <img
@@ -61,9 +50,9 @@
                   alt="icon_login"
                 />
                 <div id="dropdown-content">
-                  <a onclick="userinfo()">Datos Usuario</a>
-                  <a onclick="resetpass()">Cambiar Contraseña</a>
-                  <a onclick="deleteuser()">Salir</a>
+                  <a id="menu_outside_datos" onclick="userinfo()">用户数据</a>
+                  <a id="menu_outside_pass" onclick="resetpass()">更改密码</a>
+                  <a id="menu_outside_delete" onclick="deleteuser()">出去</a>
                 </div>
               </div>
             </li>
@@ -75,14 +64,14 @@
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div class="signup">
             <form action="/registrarUsuario" method="POST" class="form-register">
-              <label for="chk" aria-hidden="true" class="label-login"
-                >Registrarse</label
+              <label for="chk" aria-hidden="true" class="label-login" id="label-registro"
+                >报到</label
               >
               <input
                 type="text"
                 id="usuario"
                 name="usuario"
-                placeholder="Nombre de Usuario"
+                placeholder="用户名"
                 required
                 class="input-login"
               />
@@ -90,7 +79,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Correo Electrónico"
+                placeholder="电子邮件"
                 required
                 class="input-login"
               />
@@ -98,24 +87,24 @@
                 type="text"
                 id="contrasenya"
                 name="contrasenya"
-                placeholder="Contraseña"
+                placeholder="密码"
                 required
                 class="input-login"
               />
-              <input type="submit" id="altausuario" value="Entrar" class="button-register">
+              <input type="submit" id="altausuario" value="连接" class="button-register">
             </form> 
           </div>
 
           <div class="login">
             <form action="/loginUsuario" method="POST" class="form-login">
-              <label for="chk" aria-hidden="true" class="label-login"
-                >Login</label
+              <label for="chk" aria-hidden="true" class="label-login" id="label-login"
+                >登录</label
               >
               <input
                 type="email"
                 id="emailLogin"
                 name="emailLogin"
-                placeholder="Correo Electrónico"
+                placeholder="电子邮件"
                 required
                 class="input-login"
               />
@@ -123,11 +112,11 @@
                 type="password"
                 id="passwordLogin"
                 name="passwordLogin"
-                placeholder="Contraseña"
+                placeholder="密码"
                 required
                 class="input-login"
               />
-              <input type="submit" value="Entrar" class="button-login" onclick="validacionUsuario()">
+              <input type="submit" value="连接" class="button-login" id="button-login" onclick="validacionUsuario()">
             </form>
           </div>
         </div>
@@ -145,5 +134,6 @@
     <script src="{{url_for('static',filename='js/validacionusuario.js')}}"></script>
     <script src="{{url_for('static',filename='js/login.js')}}"></script>
     <script src="{{url_for('static',filename='js/cookies.js')}}"></script>
+    <script src="{{url_for('static',filename='traduccion/logintraduccion.js')}}"></script>
   </body>
 </html>

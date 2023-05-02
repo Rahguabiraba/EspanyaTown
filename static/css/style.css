@@ -104,8 +104,8 @@ html {
   }
 
   .logo {
-    width: 8vw;
-    height: 8vw;
+    width: 6vw;
+    height: 6vw;
     transition: all 0.3s ease;
   }
 
@@ -289,14 +289,15 @@ html {
   .part-form-top .button {
     display: flex;
     height: 100vw;
-    width: 100%;
+    width: 80%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
 
   /****** PRIMEROS PARES DE BOTONES ******/
   .part-form-top a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
     height: 40px;
@@ -330,7 +331,7 @@ html {
   }
 
   .part-form label {
-    font-size: 3em;
+    font-size: 2.6em;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
@@ -340,7 +341,7 @@ html {
 
   .part-form input {
     width: 60%;
-    height: 90px;
+    height: 10vw;
     border-style: none none solid;
     border-width: 1px 1px 2px;
     border-color: #000 #000 #fff;
@@ -357,13 +358,14 @@ html {
   .part-form .button {
     display: flex;
     height: 100vw;
-    width: 60%;
+    width: 80%;
     align-items: center;
     justify-content: space-between;
   }
 
   .part-form a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
     height: 40px;
@@ -411,7 +413,7 @@ html {
 
   .part-form .button .button-submit input {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1rem;
     width: 100%;
     margin-top: 20px;
     padding: 0px 25px;
@@ -468,7 +470,7 @@ html {
     height: 100%;
     justify-content: flex-start;
     position: relative;
-    z-index: 99;
+    z-index: 49;
     padding: 40px;
     flex-direction: row;
     gap: 40px;
@@ -495,12 +497,10 @@ html {
     background-color: #1a1a1ae3;
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
       -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner {
     position: relative;
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner img {
@@ -626,6 +626,7 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .drop-rotate {
@@ -635,7 +636,6 @@ html {
   .drop i {
     display: block;
     position: relative;
-    left: 3.5em;
     cursor: pointer;
     font-size: 1.8rem;
     color: rgb(255 255 255);
@@ -756,7 +756,7 @@ html {
 
   .main {
     width: 100vw;
-    height: 500px;
+    height: 31.7em;
     overflow: hidden;
     border-radius: 10px;
     background: transparent;
@@ -776,7 +776,7 @@ html {
     font-size: 2.3em;
     justify-content: center;
     display: flex;
-    margin: 40px;
+    margin: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -864,7 +864,7 @@ html {
   }
 
   .login {
-    height: 401px;
+    height: 400px;
     background: #e51e2a;
     border-radius: 50%;
     transform: translateY(-90px);
@@ -876,7 +876,7 @@ html {
   }
 
   #chk:checked ~ .login {
-    transform: translateY(-500px);
+    transform: translateY(-400px);
   }
   #chk:checked ~ .login .label-login {
     transform: scale(1);
@@ -886,7 +886,7 @@ html {
   }
 
   #dropimage {
-    width: 4vw;
+    width: 3vw;
   }
 
   #dropdown {
@@ -931,10 +931,12 @@ html {
     width: 100vw;
     align-items: flex-start;
     padding: 30px 0px 0px 80px;
+    position: relative;
   }
+
   main h2 {
     display: flex;
-    font-size: 3.5vw;
+    font-size: 2em;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
@@ -943,13 +945,13 @@ html {
 
   main p {
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.3em;
   }
 
   .info {
     display: flex;
     align-items: center;
-    gap: 3vw;
+    gap: 20px;
   }
 
   #button-pass {
@@ -1120,7 +1122,7 @@ html {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.2em;
     border-radius: 40px;
     border-color: transparent;
     padding: 10px 0px 10px 10px;
@@ -1303,7 +1305,6 @@ html {
   .part-form-top label {
     font-size: 3em;
     margin-bottom: 10px;
-    line-height: 2.5em;
     font-weight: 700;
     width: 100%;
     color: #fff;
@@ -1332,7 +1333,8 @@ html {
 
   /****** PRIMEROS PARES DE BOTONES ******/
   .part-form-top a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
     height: 40px;
@@ -1368,7 +1370,6 @@ html {
   .part-form label {
     font-size: 3em;
     margin-bottom: 10px;
-    line-height: 2.5em;
     font-weight: 700;
     width: 100%;
     color: #fff;
@@ -1399,7 +1400,8 @@ html {
   }
 
   .part-form a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
     height: 40px;
@@ -1494,7 +1496,7 @@ html {
     display: flex;
     width: 100%;
     justify-content: center;
-    font-size: 3vw;
+    font-size: 1.5em;
     color: #f3f3f3;
   }
 
@@ -1504,10 +1506,11 @@ html {
     height: 100%;
     justify-content: flex-start;
     position: relative;
-    z-index: 99;
+    z-index: 49;
     padding: 40px;
     flex-direction: row;
     gap: 40px;
+    flex-wrap: wrap;
   }
 
   .card {
@@ -1531,12 +1534,10 @@ html {
     background-color: #1a1a1ae3;
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
       -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner {
     position: relative;
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner img {
@@ -1662,6 +1663,7 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .drop-rotate {
@@ -1671,7 +1673,6 @@ html {
   .drop i {
     display: block;
     position: relative;
-    left: 3.5em;
     cursor: pointer;
     font-size: 1.8rem;
     color: rgb(255 255 255);
@@ -1792,7 +1793,7 @@ html {
 
   .main {
     width: 100vw;
-    height: 500px;
+    height: 530px;
     overflow: hidden;
     border-radius: 10px;
     background: transparent;
@@ -1812,7 +1813,7 @@ html {
     font-size: 2.3em;
     justify-content: center;
     display: flex;
-    margin: 40px;
+    margin: 25px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -1826,7 +1827,7 @@ html {
     border-color: #000 #000 #fff;
     background-color: transparent;
     color: #ffffff;
-    font-size: 28px;
+    font-size: 1.5em;
     line-height: 28px;
   }
 
@@ -1912,7 +1913,7 @@ html {
   }
 
   #chk:checked ~ .login {
-    transform: translateY(-500px);
+    transform: translateY(-420px);
   }
   #chk:checked ~ .login .label-login {
     transform: scale(1);
@@ -1966,11 +1967,12 @@ html {
     flex-direction: column;
     width: 100vw;
     align-items: flex-start;
-    padding: 30px 0px 0px 80px;
+    padding: 30px 0px 0px 40px;
+    position: relative;
   }
   main h2 {
     display: flex;
-    font-size: 3.5vw;
+    font-size: 2.5em;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
@@ -1979,7 +1981,7 @@ html {
 
   main p {
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
 
   .info {
@@ -2020,8 +2022,8 @@ html {
   .logo-about {
     position: relative;
     z-index: 99;
-    width: 15vw;
-    height: 20vw;
+    width: 25vw;
+    height: 30vw;
   }
 
   .texto-about {
@@ -2137,6 +2139,18 @@ html {
 
   /****** MENU ******/
 
+  #info{
+    display: none;
+  }
+
+  #reset{
+    display: none;
+  }
+
+  #delete{
+    display: none;
+  }
+
   #menu-outside {
     display: none;
   }
@@ -2151,7 +2165,7 @@ html {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    font-size: 3vw;
+    font-size: 1.3em;
     border-radius: 40px;
     border-color: transparent;
     padding: 10px 0px 10px 10px;
@@ -2340,8 +2354,8 @@ html {
 
   .icons li .icon {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: #222;
     margin-right: 45px;
@@ -2406,17 +2420,16 @@ html {
 
   /****** PRIMERA PARTE DEL FORMULARIO ******/
   .part-form-top label {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;
-    line-height: 2.5em;
     font-weight: 700;
     width: 100%;
     color: #fff;
   }
 
   .part-form-top input {
-    width: 60%;
-    height: 60px;
+    width: 90%;
+    height: 15vw;
     padding-bottom: 10px;
     border-style: none none solid;
     border-width: 1px 1px 2px;
@@ -2432,17 +2445,18 @@ html {
     height: 100vw;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
   }
 
   /****** PRIMEROS PARES DE BOTONES ******/
   .part-form-top a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
+    font-size: 0.8em;
     height: 40px;
     background: transparent;
-    border-radius: 10px 10px 10px 10px;
     border-style: solid;
     border-color: #fff;
     color: #fff;
@@ -2468,20 +2482,20 @@ html {
     height: 100vh;
     position: relative;
     z-index: 10;
+    justify-content: flex-end;
   }
 
   .part-form label {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 10px;
-    line-height: 2.5em;
     font-weight: 700;
     width: 100%;
     color: #fff;
   }
 
   .part-form input {
-    width: 60%;
-    height: 90px;
+    width: 100%;
+    height: 15vw;
     border-style: none none solid;
     border-width: 1px 1px 2px;
     border-color: #000 #000 #fff;
@@ -2498,18 +2512,19 @@ html {
   .part-form .button {
     display: flex;
     height: 100vw;
-    width: 60%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
   }
 
   .part-form a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 25px;
+    font-size: 0.8em;
     height: 40px;
     background: transparent;
-    border-radius: 10px 10px 10px 10px;
     border-style: solid;
     border-color: #fff;
     color: #fff;
@@ -2552,7 +2567,7 @@ html {
 
   .part-form .button .button-submit input {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     width: 100%;
     margin-top: 20px;
     padding: 0px 25px;
@@ -2574,7 +2589,7 @@ html {
   }
 
   #generos_list {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 
   .part-form textarea {
@@ -2599,7 +2614,7 @@ html {
     display: flex;
     width: 100%;
     justify-content: center;
-    font-size: 3vw;
+    font-size: 1.3em;
     color: #f3f3f3;
   }
 
@@ -2609,9 +2624,9 @@ html {
     height: 100%;
     justify-content: flex-start;
     position: relative;
-    z-index: 99;
+    z-index: 49;
     padding: 40px;
-    flex-direction: row;
+    flex-direction: column;
     gap: 40px;
   }
 
@@ -2636,12 +2651,10 @@ html {
     background-color: #1a1a1ae3;
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
       -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner {
     position: relative;
-    animation: poster 2s linear 2s infinite alternate;
   }
 
   .card__banner img {
@@ -2767,6 +2780,7 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .drop-rotate {
@@ -2776,7 +2790,6 @@ html {
   .drop i {
     display: block;
     position: relative;
-    left: 3.5em;
     cursor: pointer;
     font-size: 1.8rem;
     color: rgb(255 255 255);
@@ -2897,7 +2910,7 @@ html {
 
   .main {
     width: 100vw;
-    height: 500px;
+    height: 425px;
     overflow: hidden;
     border-radius: 10px;
     background: transparent;
@@ -2924,14 +2937,14 @@ html {
   }
   .input-login {
     width: 60%;
-    height: 50px;
+    height: 2em;
     padding-bottom: 10px;
     border-style: none none solid;
     border-width: 1px 1px 2px;
     border-color: #000 #000 #fff;
     background-color: transparent;
     color: #ffffff;
-    font-size: 28px;
+    font-size: 1.3em;
     line-height: 28px;
   }
 
@@ -2974,7 +2987,7 @@ html {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding: 10px 90px;
+    padding: 10px 65px;
     background: #fff;
     border-style: solid;
     border-color: transparent;
@@ -3005,7 +3018,7 @@ html {
   }
 
   .login {
-    height: 780px;
+    height: 400px;
     background: #e51e2a;
     border-radius: 50%;
     transform: translateY(-90px);
@@ -3017,7 +3030,7 @@ html {
   }
 
   #chk:checked ~ .login {
-    transform: translateY(-500px);
+    transform: translateY(-425px);
   }
   #chk:checked ~ .login .label-login {
     transform: scale(1);
@@ -3071,11 +3084,12 @@ html {
     flex-direction: column;
     width: 100vw;
     align-items: flex-start;
-    padding: 30px 0px 0px 80px;
+    padding: 30px 0px 0px 20px;
+    position:relative;
   }
   main h2 {
     display: flex;
-    font-size: 3.5vw;
+    font-size: 2em;
     margin-bottom: 10px;
     line-height: 2.5em;
     font-weight: 700;
@@ -3084,13 +3098,13 @@ html {
 
   main p {
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.5em;
   }
 
   .info {
     display: flex;
-    align-items: center;
-    gap: 3vw;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   #button-pass {
@@ -3125,8 +3139,8 @@ html {
   .logo-about {
     position: relative;
     z-index: 99;
-    width: 15vw;
-    height: 20vw;
+    width: 40vw;
+    height: 50vw;
   }
 
   .texto-about {
