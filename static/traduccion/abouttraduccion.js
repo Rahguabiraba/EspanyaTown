@@ -1,6 +1,6 @@
 const language = getCookie("language");
 //Declaramos todos los elementos de textos en variables
-let menu_inside_inicio = document.getElementById("menu_outside_inicio");
+let menu_inside_inicio = document.getElementById("menu_inside_inicio");
 let menu_inside_login = document.getElementById("menu_inside_login");
 let menu_inside_about = document.getElementById("menu_inside_about");
 let menu_inside_datos = document.getElementById("menu_inside_datos");

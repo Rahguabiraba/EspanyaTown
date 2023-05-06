@@ -115,6 +115,6 @@ def resetpass():
         else: 
             return render_template("resetpass.html")
         
-# app.config['TEMPLATES_AUTO_RELOAD'] = True
-# app.run(host='localhost', port=3000, debug=True)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.run(host='localhost', port=3000, debug=True)
 
