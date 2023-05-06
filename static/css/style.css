@@ -2203,7 +2203,7 @@ html {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    z-index: 52;
+    z-index: 102;
   }
 
   .bar1,
@@ -2233,7 +2233,7 @@ html {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 51;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
