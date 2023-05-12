@@ -1,4 +1,5 @@
 import sqlite3 as sql
+import os
 
 
 def registrarPelicula(request):
@@ -13,14 +14,17 @@ def registrarPelicula(request):
     comentario = respuesta['comentario']
 
     try:
-        conector = sql.connect("database/cinema.db")
+        ruta = os.getcwd()
+        conector = sql.connect(f"{ruta}/database/cinema.db")
         cursor = conector.cursor()
-        cursor.execute(f"INSERT INTO formulario (nombre,motivo,edad,genero,comentarios) VALUES ('{nombre}','{motivo}','{edad}','{genero}','{comentario}')")
+        cursor.execute(
+            f"INSERT INTO formulario (nombre,motivo,edad,genero,comentarios) VALUES ('{nombre}','{motivo}','{edad}','{genero}','{comentario}')")
         conector.commit()
         conector.close()
         return genero
     except Exception as ex:
         print(ex)
+
 
 def registrarUsuario(request):
     # Pasamos la respuesta del formulario a una variable
@@ -32,7 +36,8 @@ def registrarUsuario(request):
     contrasenya = respuesta['contrasenya']
 
     try:
-        conector = sql.connect("database/cinema.db")
+        ruta = os.getcwd()
+        conector = sql.connect(f"{ruta}/database/cinema.db")
         cursor = conector.cursor()
         cursor.execute(f"INSERT INTO usuarios (nombreUser,email,contrasenya) VALUES ('{usuario}','{email}','{contrasenya}')")
         conector.commit()
@@ -50,7 +55,8 @@ def validarUsuario(request):
     password = respuesta['passwordLogin']
 
     try:
-        conector = sql.connect("database/cinema.db")
+        ruta = os.getcwd()
+        conector = sql.connect(f"{ruta}/database/cinema.db")
         cursor = conector.cursor()
         cursor.execute(f"SELECT * FROM usuarios WHERE email='{email}'")
         datos = cursor.fetchall()
@@ -81,7 +87,8 @@ def validarPassword(request):
 
     if newpass == confirmpass:
         try:
-            conector = sql.connect("database/cinema.db")
+            ruta = os.getcwd()
+            conector = sql.connect(f"{ruta}/database/cinema.db")
             cursor = conector.cursor()
             cursor.execute(f"UPDATE usuarios SET contrasenya='{newpass}' WHERE iduser='{iduser}'")
             conector.commit()

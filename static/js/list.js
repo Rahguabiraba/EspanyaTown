@@ -1,6 +1,6 @@
 window.onload = function () {
     //Recuperamos cada celda de la tabla
-    const boton_drop = document.querySelectorAll(".boton-drop");
+    const boton_drop = document.getElementsByClassName("boton-drop");
 
     //Para cada celda, añadimos el listener
     for (let i = 0; i < boton_drop.length; i++) {

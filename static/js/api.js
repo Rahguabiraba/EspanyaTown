@@ -51,7 +51,7 @@ fetch(API_URL)
 
     let listadoPeliculas = [];
 
-    if (user != "") {
+    if (username != "") {
       peliculas.forEach((movie) => {
         const { id, title, poster_path, vote_average, overview } = movie;
         const movieEl = document.createElement("div");
