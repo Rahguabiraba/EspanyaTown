@@ -582,7 +582,6 @@ html {
   }
 
   .__content--btn {
-    margin-top: 20px;
     margin-left: 80px;
     padding: 5px 20px;
     background: #e51e2a;
@@ -596,6 +595,7 @@ html {
     letter-spacing: 1px;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .__content--btn:hover {
@@ -1619,7 +1619,6 @@ html {
   }
 
   .__content--btn {
-    margin-top: 20px;
     margin-left: 80px;
     padding: 5px 20px;
     background: #e51e2a;
@@ -1633,6 +1632,7 @@ html {
     letter-spacing: 1px;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .__content--btn:hover {
@@ -2738,7 +2738,6 @@ html {
   }
 
   .__content--btn {
-    margin-top: 20px;
     margin-left: 80px;
     padding: 5px 20px;
     background: #e51e2a;
@@ -2752,6 +2751,7 @@ html {
     letter-spacing: 1px;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .__content--btn:hover {
