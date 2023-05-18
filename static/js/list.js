@@ -11,7 +11,6 @@ window.onload = function () {
 function mostrarDescripcion(e) {
   let button = e.target;
   let descripcion = button.parentElement.nextElementSibling;
-
   button.classList.toggle("drop-rotate");
   descripcion.classList.toggle("drop-active");
 }

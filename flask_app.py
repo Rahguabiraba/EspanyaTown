@@ -106,7 +106,7 @@ def paginaAcercaDe():
 def infoUser():
     return render_template("userinfo.html")
 
-#Ruta para abrir pagina Inicial
+#Ruta para abrir pagina Cambiar Contrasenya
 @app.route("/cambiarContrasenya")
 def resetpass():
         if request.args.get("data"):

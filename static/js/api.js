@@ -129,7 +129,7 @@ fetch(API_URL)
               class="banner"
             />
             <div class="drop">
-              <i class="fas fa-chevron-circle-down boton-drop">
+              <i class="fas fa-chevron-circle-down boton-drop" onclick="mostrarDescripcion(event)">
               </i>
             </div>
             <div class="card__descripcion drop-descripcion">
@@ -200,4 +200,11 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+function mostrarDescripcion(event) {
+  let button = event.target;
+  let descripcion = button.parentElement.nextElementSibling;
+  button.classList.toggle("drop-rotate");
+  descripcion.classList.toggle("drop-active");
 }
